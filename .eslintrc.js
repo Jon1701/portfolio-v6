@@ -11,6 +11,7 @@ module.exports = {
   extends: [
     'react-app', // Extends the config shipped with Gatsby.
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier'
   ],
   ignorePatterns: [
     'node_modules/',

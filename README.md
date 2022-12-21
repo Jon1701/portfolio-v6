@@ -23,6 +23,7 @@ The following `make` commands are available:
   - `make install-node-modules` to install Node dependencies
 - `make lint` to run all linters
   - `make run-eslint` to run ESLint
+  - `make run-prettier` to run Prettier
 - `make build` to build a Production version of the project
 - `make dev` to start the Gatsby Development server
 - `make staging` to start the Gatsby Staging server
