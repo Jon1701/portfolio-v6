@@ -15,7 +15,7 @@ install-node-modules:
 	@echo "Done installing Node dependencies."
 
 # Runs all linters.
-lint: run-eslint run-prettier
+lint: run-eslint run-prettier run-stylelint
 
 # Runs ESLint.
 run-eslint:
@@ -35,6 +35,12 @@ run-prettier:
 	@${PATH_NODE_MODULES_BIN}/prettier \
 		--check **/*.{ts,tsx,js}
 	@echo "Done running Prettier."
+
+# Runs Stylelint
+run-stylelint:
+	@echo "Running Stylelint..."
+	@${PATH_NODE_MODULES_BIN}/stylelint "**/*.{ts,tsx,js}"
+	@echo "Done running Stylelint."
 
 # Builds a Production version of the project.
 build:

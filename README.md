@@ -24,6 +24,7 @@ The following `make` commands are available:
 - `make lint` to run all linters
   - `make run-eslint` to run ESLint
   - `make run-prettier` to run Prettier
+  - `make run-stylelint` to run Stylelint
 - `make build` to build a Production version of the project
 - `make dev` to start the Gatsby Development server
 - `make staging` to start the Gatsby Staging server
