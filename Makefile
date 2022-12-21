@@ -14,6 +14,21 @@ install-node-modules:
 	@npm ci
 	@echo "Done installing Node dependencies."
 
+# Runs all linters.
+lint: run-eslint
+
+# Runs ESLint.
+run-eslint:
+	@echo "Running ESLint..."
+	@${PATH_NODE_MODULES_BIN}/eslint \
+		--config .eslintrc.js \
+		--ext .js \
+		--ext .jsx \
+		--ext .ts \
+		--ext .tsx \
+		.
+	@echo "Done running ESLint."
+
 # Builds a Production version of the project.
 build:
 	@echo "Building Production version of the project..."
