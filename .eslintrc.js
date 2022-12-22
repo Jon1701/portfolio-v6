@@ -19,7 +19,9 @@ module.exports = {
     'public',
     '.eslintrc.js',
     'gatsby.config.js',
+    'gatsby-node.ts',
     'prettier.config.js',
     'stylelint.config.js',
+    'src/gatsby-types.d.ts',
   ],
 };
