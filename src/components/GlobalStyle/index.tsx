@@ -1,12 +1,15 @@
+import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+
+import { ZenMaruGothicRegular } from '@fonts/index';
 
 const GlobalStyle = createGlobalStyle`
 	html,
 	body {
-		padding: 0;
 		margin: 0;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-			Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+		padding: 0;
+
+		font-family: "Zen Maru Gothic Regular", sans-serif;
 		background-color: #121212;
 		color: #C4C7C5;
 	}
@@ -21,4 +24,14 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
-export default GlobalStyle;
+/**
+ * Global stylesheet.
+ */
+const Wrapped: React.FC = () => (
+  <React.Fragment>
+    <ZenMaruGothicRegular />
+    <GlobalStyle />
+  </React.Fragment>
+);
+
+export default Wrapped;
