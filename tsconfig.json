@@ -110,6 +110,7 @@
     "./gatsby-node.ts",
     "./gatsby-config.ts",
     "./plugins/**/*",
-    "./fonts.d.ts"
+    "./fonts.d.ts",
+    "./images.d.ts"
   ]
 }
