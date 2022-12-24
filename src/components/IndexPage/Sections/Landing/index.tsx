@@ -55,10 +55,19 @@ const Description = styled.div`
   flex-shrink: 2;
 `;
 
+interface Props {
+  /**
+   * Function to scroll to the Portfolio section.
+   */
+  scrollToPortfolioSection(): void;
+}
+
 /**
  * Index Page Landing Section.
  */
-const LandingSection: React.FC = () => {
+const LandingSection: React.FC<Props> = ({
+  scrollToPortfolioSection,
+}: Props) => {
   return (
     <Container>
       <Content>
@@ -71,7 +80,7 @@ const LandingSection: React.FC = () => {
           </div>
         </Description>
 
-        <ViewMyPortfolioButton handleClick={() => {}} />
+        <ViewMyPortfolioButton handleClick={scrollToPortfolioSection} />
       </Content>
     </Container>
   );
