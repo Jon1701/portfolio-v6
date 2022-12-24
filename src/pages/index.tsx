@@ -1,8 +1,20 @@
-import * as React from 'react';
+import React from 'react';
 import type { PageProps } from 'gatsby';
 
+import GlobalStyle from '@components/GlobalStyle';
+import LandingSection from '@components/IndexPage/Sections/Landing';
+
+/**
+ * Index page.
+ */
 const IndexPage: React.FC<PageProps> = () => {
-  return <main>Hello World</main>;
+  return (
+    <main>
+      <GlobalStyle />
+
+      <LandingSection />
+    </main>
+  );
 };
 
 export default IndexPage;
