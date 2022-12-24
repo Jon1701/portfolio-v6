@@ -3,6 +3,7 @@ import type { PageProps } from 'gatsby';
 
 import GlobalStyle from '@components/GlobalStyle';
 import LandingSection from '@components/IndexPage/Sections/Landing';
+import PortfolioSection from '@components/IndexPage/Sections/Portfolio';
 
 /**
  * Index page.
@@ -13,6 +14,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <GlobalStyle />
 
       <LandingSection />
+      <PortfolioSection />
     </main>
   );
 };
