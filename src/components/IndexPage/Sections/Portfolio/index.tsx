@@ -6,7 +6,10 @@ import ProjectCard from '@components/ProjectCard';
 import evoMemberPortalImageURL from './assets/images/evo-member-portal.png';
 import evoPluginImageURL from './assets/images/evo-plugin.png';
 import evoWebsiteImageURL from './assets/images/evo-website.png';
+import Logo from './components/Logo';
+import navTechLogoURL from './assets/images/navtech-logo.png';
 import pmpGatewayDashboardImageURL from './assets/images/pmp-gateway-dashboard.png';
+import pmpLogoURL from './assets/images/pmp-logo.png';
 import pmpSalesSiteImageURL from './assets/images/pmp-sales-site.png';
 
 /**
@@ -56,30 +59,54 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
             title="Pricematepay Gateway Dashboard"
             description="Payment processing and Invoicing solution allowing organizations to handle credit card payments for their clients."
             imageSrc={pmpGatewayDashboardImageURL}
+            LogoElement={
+              <Logo src={pmpLogoURL} altText="Developed at Pricematepay" />
+            }
           />
 
           <ProjectCard
             title="Pricematepay Sales Site"
-            description="Product information site highlighting the features of our Payment Gateway Platform in order to aid the sales team in client acquisition."
+            description="Product information site highlighting the features of the Payment Gateway Platform to aid the Sales Team in client acquisition."
             imageSrc={pmpSalesSiteImageURL}
+            LogoElement={
+              <Logo src={pmpLogoURL} altText="Developed at Pricematepay" />
+            }
           />
 
           <ProjectCard
             title="EVO SEO WordPress Plugin"
-            description="Plugin to seamlessly add Search Engine Optimizations to a WordPress web property."
+            description="Plugin to seamlessly add Search Engine Optimizations to a WordPress web property with minimal technical knowledge."
             imageSrc={evoPluginImageURL}
+            LogoElement={
+              <Logo
+                src={navTechLogoURL}
+                altText="Developed at Navigate Technologies"
+              />
+            }
           />
 
           <ProjectCard
             title="EVO SEO Member Portal"
             description="Paid value-add for the EVO SEO WordPress plugin which facilitated seamless integration with Google Search Console and Google Analytics."
             imageSrc={evoMemberPortalImageURL}
+            LogoElement={
+              <Logo
+                src={navTechLogoURL}
+                altText="Developed at Navigate Technologies"
+              />
+            }
           />
 
           <ProjectCard
             title="EVO SEO Product Site"
             description="Product information site detailing the features and pricing of the EVO SEO WordPress Plugin."
             imageSrc={evoWebsiteImageURL}
+            LogoElement={
+              <Logo
+                src={navTechLogoURL}
+                altText="Developed at Navigate Technologies"
+              />
+            }
           />
         </GridLayout>
       </Content>

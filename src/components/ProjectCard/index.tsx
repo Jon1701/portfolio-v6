@@ -4,10 +4,10 @@ import styled from 'styled-components';
 /**
  * Component container.
  */
-const Container = styled.div`
+const Container = styled.article`
   background-color: #191919;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
-    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+  box-shadow: rgb(0 0 0 / 20%) 0 2px 4px -1px, rgb(0 0 0 / 14%) 0 4px 5px 0,
+    rgb(0 0 0 / 12%) 0 1px 10px 0;
 `;
 
 interface Props {
@@ -25,6 +25,11 @@ interface Props {
    * URL of the image.
    */
   imageSrc: string;
+
+  /**
+   * Logo Element.
+   */
+  LogoElement?: React.ReactElement;
 }
 
 /**
@@ -54,6 +59,8 @@ interface ContainerImageProps {
  * Container which holds the image as a background image.
  */
 const ContainerImage = styled.div<ContainerImageProps>`
+  position: relative;
+
   background: url(${props => props.imageSrc});
   background-size: cover;
   background-position: 0 0;
@@ -84,12 +91,15 @@ const ProjectCard: React.FC<Props> = ({
   title,
   description,
   imageSrc,
+  LogoElement,
 }: Props) => {
   return (
     <Container>
       <Title>{title}</Title>
       <Figure>
-        <ContainerImage imageSrc={imageSrc} role="img" title={description} />
+        <ContainerImage imageSrc={imageSrc} role="img" title={description}>
+          {LogoElement || undefined}
+        </ContainerImage>
         <FigCaption>{description}</FigCaption>
       </Figure>
     </Container>
