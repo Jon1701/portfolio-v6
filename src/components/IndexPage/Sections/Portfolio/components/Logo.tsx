@@ -1,3 +1,4 @@
+import { mobileBreakpoint } from '@util/breakpoints';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -13,6 +14,14 @@ const StyledImage = styled.img`
 
   border: solid 1px #000;
   padding: 5px;
+
+  ${mobileBreakpoint`
+    bottom: 2px;
+    right: 2px;
+
+    max-width: 115px;
+    padding: 3px;
+  `}
 `;
 
 interface Props {

@@ -4,6 +4,11 @@ import styled from 'styled-components';
 import ToggleButton from './components/ToggleButton';
 import ListOfTechnologies from './components/ListOfTechnologies';
 import ViewDemoButton from './components/ViewDemoButton';
+import {
+  laptopBreakpoint,
+  mobileBreakpoint,
+  tabletBreakpoint,
+} from '@util/breakpoints';
 
 /**
  * Component container.
@@ -50,9 +55,24 @@ interface Props {
  * Project title.
  */
 const Title = styled.div`
+  ${mobileBreakpoint`
+    font-size: 1rem;
+    padding: 10px 0;
+  `}
+
+  ${tabletBreakpoint`
+    font-size: 1.2rem;
+    padding: 10px 0;
+  `}
+
+  ${laptopBreakpoint`
+    font-size: 1.3rem;
+    padding: 10px 0;
+  `}
+
+  padding: 15px;
   font-size: 1.5rem;
   text-align: center;
-  padding: 15px;
 `;
 
 /**
@@ -96,6 +116,12 @@ const ContainerImage = styled.div<ContainerImageProps>`
  */
 const FigCaption = styled.figcaption`
   padding: 15px;
+
+  text-align: left;
+
+  ${mobileBreakpoint`
+    text-align: center;
+  `}
 `;
 
 /**

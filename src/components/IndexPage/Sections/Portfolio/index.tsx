@@ -13,6 +13,7 @@ import pmpLogoURL from './assets/images/pmp-logo.png';
 import pmpSalesSiteImageURL from './assets/images/pmp-sales-site.png';
 import byTheNumbersImageURL from './assets/images/by-the-numbers.png';
 import mansfieldLogoURL from './assets/images/mansfield-logo.png';
+import { mobileBreakpoint, tabletBreakpoint } from '@util/breakpoints';
 
 /**
  * Component container.
@@ -43,8 +44,9 @@ const Content = styled.div`
 const GridLayout = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
+
   gap: 2%;
 
   & > * {
@@ -54,6 +56,23 @@ const GridLayout = styled.div`
       margin-bottom: 2%;
     }
   }
+
+  ${mobileBreakpoint`
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  gap: 50px;
+  padding: 0 5px;
+`}
+
+  ${tabletBreakpoint`
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  
+  gap: 1%;
+`}
 `;
 
 // Object containing List of Technologies for each Project.
