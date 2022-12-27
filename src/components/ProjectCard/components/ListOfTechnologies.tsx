@@ -12,8 +12,8 @@ interface Props {
  * Component container.
  */
 const Container = styled.ul`
-  font-size: 0.9em;
-  font-weight: bold;
+  font-size: 1em;
+  font-family: monospace;
 
   list-style: none;
   padding: 0 15px;
