@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import ToggleButton from './components/ToggleButton';
 import ListOfTechnologies from './components/ListOfTechnologies';
+import ViewDemoButton from './components/ViewDemoButton';
 
 /**
  * Component container.
@@ -38,6 +39,11 @@ interface Props {
    * Array of technologies used.
    */
   technologies?: Array<string>;
+
+  /**
+   * Link to demo site.
+   */
+  demoHref?: string;
 }
 
 /**
@@ -101,6 +107,7 @@ const ProjectCard: React.FC<Props> = ({
   imageSrc,
   LogoElement,
   technologies,
+  demoHref,
 }: Props) => {
   // Controls the visibility of the List of Technologies element.
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -114,6 +121,8 @@ const ProjectCard: React.FC<Props> = ({
         </ContainerImage>
         <FigCaption>{description}</FigCaption>
       </Figure>
+
+      {demoHref !== undefined ? <ViewDemoButton href={demoHref} /> : undefined}
 
       {isVisible && technologies !== undefined && technologies.length > 0 ? (
         <ListOfTechnologies items={technologies} />

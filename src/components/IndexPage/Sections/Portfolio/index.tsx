@@ -40,7 +40,7 @@ const Content = styled.div`
  */
 const GridLayout = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
 `;
@@ -161,6 +161,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
               <Logo src={pmpLogoURL} altText="Developed at Pricematepay" />
             }
             technologies={technologies.pricematePay.gatewayDashboard}
+            demoHref="https://gateway.pricematepay.com/"
           />
 
           <ProjectCard
@@ -171,6 +172,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
               <Logo src={pmpLogoURL} altText="Developed at Pricematepay" />
             }
             technologies={technologies.pricematePay.salesSite}
+            demoHref="https://pricematepay.com/"
           />
 
           <ProjectCard
