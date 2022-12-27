@@ -39,10 +39,19 @@ const Content = styled.div`
  * Grid layout.
  */
 const GridLayout = styled.div`
-  display: grid;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2%;
+
+  & > * {
+    flex-basis: 48%;
+
+    &:not(:last-child) {
+      margin-bottom: 2%;
+    }
+  }
 `;
 
 // Object containing List of Technologies for each Project.
