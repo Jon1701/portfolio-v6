@@ -1,9 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { mobileBreakpoint } from '@util/breakpoints';
+
 import bgURL from './assets/background.jpg';
 import ViewMyPortfolioButton from './components/ViewMyPortfolioButton';
 
+/**
+ * Component container.
+ */
 const Container = styled.section`
   position: relative;
 
@@ -34,6 +39,9 @@ const Container = styled.section`
   }
 `;
 
+/**
+ * Container for the content.
+ */
 const Content = styled.div`
   position: relative;
 
@@ -42,17 +50,34 @@ const Content = styled.div`
   width: 100%;
 
   & > *:not(:last-child) {
+    ${mobileBreakpoint`
+      margin-bottom: 15px;
+    `}
+
     margin-bottom: 25px;
   }
 `;
 
+/**
+ * Name.
+ */
 const Name = styled.div`
+  ${mobileBreakpoint`
+    font-size: 3rem;
+  `}
+
   font-size: 4rem;
 `;
 
+/**
+ * Description.
+ */
 const Description = styled.div`
+  ${mobileBreakpoint`
+    font-size: 1.3rem;
+  `}
+
   font-size: 1.5rem;
-  flex-shrink: 2;
 `;
 
 interface Props {
