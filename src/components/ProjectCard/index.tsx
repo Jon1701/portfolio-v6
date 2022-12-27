@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+
+import ToggleButton from './components/ToggleButton';
+import ListOfTechnologies from './components/ListOfTechnologies';
 
 /**
  * Component container.
@@ -30,6 +33,11 @@ interface Props {
    * Logo Element.
    */
   LogoElement?: React.ReactElement;
+
+  /**
+   * Array of technologies used.
+   */
+  technologies?: Array<string>;
 }
 
 /**
@@ -85,14 +93,18 @@ const FigCaption = styled.figcaption`
 `;
 
 /**
- * Card which displays project information.
+ * Card which displays Project information.
  */
 const ProjectCard: React.FC<Props> = ({
   title,
   description,
   imageSrc,
   LogoElement,
+  technologies,
 }: Props) => {
+  // Controls the visibility of the List of Technologies element.
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
   return (
     <Container>
       <Title>{title}</Title>
@@ -102,6 +114,15 @@ const ProjectCard: React.FC<Props> = ({
         </ContainerImage>
         <FigCaption>{description}</FigCaption>
       </Figure>
+
+      {isVisible && technologies !== undefined && technologies.length > 0 ? (
+        <ListOfTechnologies items={technologies} />
+      ) : undefined}
+
+      <ToggleButton
+        handleClick={() => setIsVisible(!isVisible)}
+        isVisible={isVisible}
+      />
     </Container>
   );
 };

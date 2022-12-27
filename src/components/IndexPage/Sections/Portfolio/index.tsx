@@ -45,6 +45,104 @@ const GridLayout = styled.div`
   gap: 25px;
 `;
 
+// Object containing List of Technologies for each Project.
+const technologies = {
+  pricematePay: {
+    gatewayDashboard: [
+      'React',
+      'React Router',
+      'Redux',
+      'Styled Components',
+      'Format.js',
+      'Chart.js',
+      'Sass',
+      'ESLint',
+      'Prettier',
+      'Stylelint',
+      'Jest',
+      'Docker',
+      'Webpack',
+      'Babel',
+      'Git',
+      'Gerrit',
+      'Jenkins CI/CD',
+    ],
+    salesSite: [
+      'React',
+      'Gatsby.js',
+      'Styled Components',
+      'Format.js',
+      'Sass',
+      'ESLint',
+      'Prettier',
+      'Stylelint',
+      'Docker',
+      'Webpack',
+      'Git',
+      'Gerrit',
+      'Jenkins CI/CD',
+    ],
+  },
+  navtech: {
+    plugin: [
+      'PHP',
+      'WordPress',
+      'MySQL',
+      'jQuery',
+      'Chart.js',
+      'Sass',
+      'PostCSS',
+      'Autoprefixer',
+      'ESLint',
+      'Stylelint',
+      'PHPUnit',
+      'Docker',
+      'Webpack',
+      'Babel',
+      'Gulp',
+      'Git',
+      'GitHub',
+      'Travis CI',
+    ],
+    memberPortal: [
+      'React',
+      'React Router',
+      'Redux',
+      'Chart.js',
+      'Sass',
+      'PostCSS',
+      'Autoprefixer',
+      'ESLint',
+      'Stylelint',
+      'Docker',
+      'Webpack',
+      'Babel',
+      'Mocha.js',
+      'Chai.js',
+      'Git',
+      'GitHub',
+      'Travis CI',
+    ],
+    productSite: [
+      'PHP',
+      'WordPress',
+      'MySQL',
+      'Sass',
+      'PostCSS',
+      'Autoprefixer',
+      'ESLint',
+      'Stylelint',
+      'Webpack',
+      'Gulp',
+      'PHPUnit',
+      'Docker',
+      'Git',
+      'GitHub',
+      'Travis CI',
+    ],
+  },
+};
+
 /**
  * Portfolio section which displays projects I've worked on.
  */
@@ -62,6 +160,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
             LogoElement={
               <Logo src={pmpLogoURL} altText="Developed at Pricematepay" />
             }
+            technologies={technologies.pricematePay.gatewayDashboard}
           />
 
           <ProjectCard
@@ -71,6 +170,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
             LogoElement={
               <Logo src={pmpLogoURL} altText="Developed at Pricematepay" />
             }
+            technologies={technologies.pricematePay.salesSite}
           />
 
           <ProjectCard
@@ -83,6 +183,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
                 altText="Developed at Navigate Technologies"
               />
             }
+            technologies={technologies.navtech.plugin}
           />
 
           <ProjectCard
@@ -95,6 +196,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
                 altText="Developed at Navigate Technologies"
               />
             }
+            technologies={technologies.navtech.memberPortal}
           />
 
           <ProjectCard
@@ -107,6 +209,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
                 altText="Developed at Navigate Technologies"
               />
             }
+            technologies={technologies.navtech.productSite}
           />
         </GridLayout>
       </Content>
