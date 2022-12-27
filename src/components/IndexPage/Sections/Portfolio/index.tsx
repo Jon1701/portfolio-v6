@@ -11,6 +11,8 @@ import navTechLogoURL from './assets/images/navtech-logo.png';
 import pmpGatewayDashboardImageURL from './assets/images/pmp-gateway-dashboard.png';
 import pmpLogoURL from './assets/images/pmp-logo.png';
 import pmpSalesSiteImageURL from './assets/images/pmp-sales-site.png';
+import byTheNumbersImageURL from './assets/images/by-the-numbers.png';
+import mansfieldLogoURL from './assets/images/mansfield-logo.png';
 
 /**
  * Component container.
@@ -150,6 +152,9 @@ const technologies = {
       'Travis CI',
     ],
   },
+  mansfield: {
+    byTheNumbers: ['Python', 'Flask', 'Amazon EC2', 'MongoDB', 'SVN'],
+  },
 };
 
 /**
@@ -221,6 +226,19 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
               />
             }
             technologies={technologies.navtech.productSite}
+          />
+
+          <ProjectCard
+            title="Sentry By The Numbers"
+            description="Data fetching algorithm to generate infographics from official NHL game data."
+            imageSrc={byTheNumbersImageURL}
+            LogoElement={
+              <Logo
+                src={mansfieldLogoURL}
+                altText="Developed at Mansfield Inc."
+              />
+            }
+            technologies={technologies.mansfield.byTheNumbers}
           />
         </GridLayout>
       </Content>
