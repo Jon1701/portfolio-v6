@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import ToggleButton from './components/ToggleButton';
-import ListOfTechnologies from './components/ListOfTechnologies';
-import ViewDemoButton from './components/ViewDemoButton';
 import {
   laptopBreakpoint,
   mobileBreakpoint,
   tabletBreakpoint,
 } from '@util/breakpoints';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+import ToggleButton from './components/ToggleButton';
+import ListOfTechnologies from './components/ListOfTechnologies';
+import ExternalLinkButton from './components/ExternalLinkButton';
 
 /**
  * Component container.
@@ -49,6 +52,11 @@ interface Props {
    * Link to demo site.
    */
   demoHref?: string;
+
+  /**
+   * Link to GitHub repository.
+   */
+  githubHref?: string;
 }
 
 /**
@@ -125,6 +133,19 @@ const FigCaption = styled.figcaption`
 `;
 
 /**
+ * Container for the external link buttons.
+ */
+const ContainerButtons = styled.div`
+  text-align: center;
+
+  & > *:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  margin-bottom: 15px;
+`;
+
+/**
  * Card which displays Project information.
  */
 const ProjectCard: React.FC<Props> = ({
@@ -134,6 +155,7 @@ const ProjectCard: React.FC<Props> = ({
   LogoElement,
   technologies,
   demoHref,
+  githubHref,
 }: Props) => {
   // Controls the visibility of the List of Technologies element.
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -148,7 +170,19 @@ const ProjectCard: React.FC<Props> = ({
         <FigCaption>{description}</FigCaption>
       </Figure>
 
-      {demoHref !== undefined ? <ViewDemoButton href={demoHref} /> : undefined}
+      <ContainerButtons>
+        {demoHref !== undefined ? (
+          <ExternalLinkButton href={demoHref} faIcon={faArrowUpRightFromSquare}>
+            <React.Fragment>View Demo</React.Fragment>
+          </ExternalLinkButton>
+        ) : undefined}
+
+        {githubHref !== undefined ? (
+          <ExternalLinkButton href={githubHref} faIcon={faGithub}>
+            <React.Fragment>View Code</React.Fragment>
+          </ExternalLinkButton>
+        ) : undefined}
+      </ContainerButtons>
 
       {isVisible && technologies !== undefined && technologies.length > 0 ? (
         <ListOfTechnologies items={technologies} />
