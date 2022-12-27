@@ -2,18 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ProjectCard from '@components/ProjectCard';
+import { mobileBreakpoint, tabletBreakpoint } from '@util/breakpoints';
 
+import byTheNumbersImageURL from './assets/images/by-the-numbers.png';
 import evoMemberPortalImageURL from './assets/images/evo-member-portal.png';
 import evoPluginImageURL from './assets/images/evo-plugin.png';
 import evoWebsiteImageURL from './assets/images/evo-website.png';
 import Logo from './components/Logo';
+import mansfieldLogoURL from './assets/images/mansfield-logo.png';
 import navTechLogoURL from './assets/images/navtech-logo.png';
 import pmpGatewayDashboardImageURL from './assets/images/pmp-gateway-dashboard.png';
 import pmpLogoURL from './assets/images/pmp-logo.png';
 import pmpSalesSiteImageURL from './assets/images/pmp-sales-site.png';
-import byTheNumbersImageURL from './assets/images/by-the-numbers.png';
-import mansfieldLogoURL from './assets/images/mansfield-logo.png';
-import { mobileBreakpoint, tabletBreakpoint } from '@util/breakpoints';
+import weatherAppImageURL from './assets/images/weather-app.png';
 
 /**
  * Component container.
@@ -174,6 +175,21 @@ const technologies = {
   mansfield: {
     byTheNumbers: ['Python', 'Flask', 'Amazon EC2', 'MongoDB', 'SVN'],
   },
+  personal: {
+    weatherApp: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Node.js',
+      'Express.js',
+      'ESLint',
+      'Styled Components',
+      'Prettier',
+      'Stylelint',
+      'Vercel',
+      'OpenWeatherMap',
+    ],
+  },
 };
 
 /**
@@ -258,6 +274,14 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
               />
             }
             technologies={technologies.mansfield.byTheNumbers}
+          />
+
+          <ProjectCard
+            title="Weather App"
+            description="A simple web application to display the weather."
+            imageSrc={weatherAppImageURL}
+            technologies={technologies.personal.weatherApp}
+            demoHref="https://weather-9wlky8dr3-development-jonbaloncom.vercel.app/"
           />
         </GridLayout>
       </Content>
