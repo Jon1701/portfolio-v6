@@ -108,11 +108,13 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "include": [
-    "./src/**/*",
-    "./gatsby-node.ts",
-    "./gatsby-config.ts",
-    "./plugins/**/*",
     "./fonts.d.ts",
-    "./images.d.ts"
+    "./gatsby-browser.tsx",
+    "./gatsby-config.ts",
+    "./gatsby-node.ts",
+    "./gatsby-ssr.tsx",
+    "./images.d.ts",
+    "./plugins/**/*",
+    "./src/**/*"
   ]
 }

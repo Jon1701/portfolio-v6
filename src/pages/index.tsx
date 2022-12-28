@@ -1,10 +1,9 @@
 import React, { useRef } from 'react';
 import type { PageProps } from 'gatsby';
 
-import GlobalStyle from '@components/GlobalStyle';
+import ContactSection from '@components/IndexPage/Sections/Contact';
 import LandingSection from '@components/IndexPage/Sections/Landing';
 import PortfolioSection from '@components/IndexPage/Sections/Portfolio';
-import ContactSection from '@components/IndexPage/Sections/Contact';
 
 /**
  * Index page.
@@ -24,8 +23,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <main>
-      <GlobalStyle />
-
       <LandingSection scrollToPortfolioSection={scrollToPortfolioSection} />
       <PortfolioSection ref={refPortfolioSection} />
       <ContactSection />
