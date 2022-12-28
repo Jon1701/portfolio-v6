@@ -92,6 +92,7 @@ const technologies = {
       'Prettier',
       'Stylelint',
       'Jest',
+      'Enzyme',
       'Docker',
       'Webpack',
       'Babel',
