@@ -14,6 +14,7 @@ import navTechLogoURL from './assets/images/navtech-logo.png';
 import pmpGatewayDashboardImageURL from './assets/images/pmp-gateway-dashboard.png';
 import pmpLogoURL from './assets/images/pmp-logo.png';
 import pmpSalesSiteImageURL from './assets/images/pmp-sales-site.png';
+import portfolioV6ImageURL from './assets/images/portfoliov6.png';
 import weatherAppImageURL from './assets/images/weather-app.png';
 
 /**
@@ -189,6 +190,17 @@ const technologies = {
       'Vercel',
       'OpenWeatherMap',
     ],
+    portfoliov6: [
+      'React',
+      'TypeScript',
+      'Gatsby.js',
+      'Styled Components',
+      'ESLint',
+      'Prettier',
+      'Stylelint',
+      'Git',
+      'GitHub',
+    ],
   },
 };
 
@@ -285,7 +297,13 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
             githubHref="https://github.com/Jon1701/weather-app"
           />
 
-          <span />
+          <ProjectCard
+            title="Portfolio V6"
+            description="The 6th iteration of my Portfolio."
+            imageSrc={portfolioV6ImageURL}
+            technologies={technologies.personal.portfoliov6}
+            githubHref="https://github.com/Jon1701/portfolio-v6"
+          />
         </GridLayout>
       </Content>
     </Container>
