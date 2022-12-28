@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { mobileBreakpoint } from '@util/breakpoints';
 
 // LinkedIn brand colour.
 const COLOR_LINKEDIN_BLUE = '#0077b5';
@@ -22,9 +23,15 @@ interface StyledAnchorProps {
  */
 const StyledAnchor = styled.a<StyledAnchorProps>`
   font-weight: bold;
-  border: solid 1px #c4c7c5;
+  border: solid 1px ${props => props.brandColor};
   padding: 25px;
   background-color: #121212;
+
+  ${mobileBreakpoint`
+    height: 150px;
+  `}
+
+  height: 300px;
 
   display: flex;
   flex-flow: column nowrap;
