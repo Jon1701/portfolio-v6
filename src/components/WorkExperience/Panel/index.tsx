@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import {
+  laptopBreakpoint,
+  mobileBreakpoint,
+  tabletBreakpoint,
+} from '@util/breakpoints';
+
 import CompanyButton from './components/CompanyButton';
 import Details from './components/Details';
 import mansfieldLogoURL from './assets/images/mansfield-logo.png';
@@ -11,6 +17,19 @@ import pricematepayLogoURL from './assets/images/pricematepay-logo.png';
  * Component container.
  */
 const Container = styled.div`
+  ${mobileBreakpoint`
+    flex-flow: column;
+    gap: 5px;
+  `}
+
+  ${tabletBreakpoint`
+    gap: 10px;
+  `}
+
+  ${laptopBreakpoint`
+    gap: 15px;
+  `}
+
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -23,6 +42,15 @@ const Container = styled.div`
  * Container for the Company buttons.
  */
 const ContainerCompanyButtons = styled.ul`
+  ${mobileBreakpoint`
+    width: 100%;
+
+    li {
+      float: left;
+      width: calc(100% / 3);
+    }
+  `}
+
   margin: 0;
   padding: 0;
   list-style: none;
@@ -140,7 +168,11 @@ export const workHistory: WorkHistory = {
   },
 };
 
+/**
+ * Panel which displays Work Experience.
+ */
 const WorkExperiencePanel = () => {
+  // Controls the currently selected company.
   const [selectedCompany, setSelectedCompany] = useState<CompanyEnums>(
     CompanyEnums.PricematePay
   );
@@ -183,6 +215,7 @@ const WorkExperiencePanel = () => {
             accentColor="#df3226"
           />
         </li>
+        <span />
       </ContainerCompanyButtons>
 
       <ContainerExperienceDetails>

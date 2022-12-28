@@ -1,3 +1,4 @@
+import { breakpoints, mobileBreakpoint } from '@util/breakpoints';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -26,6 +27,18 @@ const StyledButton = styled.button<StyledButtonProps>`
   width: 100%;
   min-height: 150px;
 
+  ${mobileBreakpoint`
+    min-height: 130px;
+    font-size: 0.9rem;
+  `}
+
+  @media screen and (min-device-width: ${breakpoints.mobile
+    .min}px) and (max-device-width: ${breakpoints.mobile.max}px) {
+    border-left: solid 0 transparent;
+    border-bottom: solid 2px
+      ${props => (props.isSelected ? props.accentColor : 'transparent')};
+  }
+
   background-color: ${props => (props.isSelected ? '#121212' : '#191919')};
   border-left: solid 2px
     ${props => (props.isSelected ? props.accentColor : 'transparent')};
@@ -39,8 +52,16 @@ const StyledButton = styled.button<StyledButtonProps>`
 
   &:hover {
     background-color: #121212;
-    border-left-color: ${props =>
-      props.isSelected ? props.accentColor : 'transparent'};
+
+    @media screen and (min-device-width: ${breakpoints.mobile
+        .min}px) and (max-device-width: ${breakpoints.mobile.max}px) {
+      border-left: solid 0 transparent;
+      border-bottom: solid 2px
+        ${props => (props.isSelected ? props.accentColor : 'transparent')};
+    }
+
+    border-left: solid 2px
+      ${props => (props.isSelected ? props.accentColor : 'transparent')};
   }
 `;
 
@@ -50,7 +71,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 const Content = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 `;
 

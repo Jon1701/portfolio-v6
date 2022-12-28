@@ -3,6 +3,7 @@ import { endOfMonth, format, startOfMonth } from 'date-fns';
 import styled from 'styled-components';
 
 import { WorkExperienceEntry } from '..';
+import { tabletBreakpoint } from '@util/breakpoints';
 
 // Token used to format Dates.
 const DATE_FORMAT_TOKEN = 'MMMM yyyy';
@@ -12,6 +13,10 @@ const DATE_FORMAT_TOKEN = 'MMMM yyyy';
  */
 const Container = styled.article`
   padding: 25px;
+
+  ${tabletBreakpoint`
+    min-height: 500px;
+  `}
 `;
 
 /**

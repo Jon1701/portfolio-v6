@@ -22,12 +22,15 @@ const Content = styled.div`
   max-width: 900px;
   margin: 0 auto;
   width: 100%;
+
+  padding: 5px;
 `;
 
 /**
  * Section title.
  */
 const Title = styled.h2`
+  margin-top: 0;
   text-align: center;
 `;
 
