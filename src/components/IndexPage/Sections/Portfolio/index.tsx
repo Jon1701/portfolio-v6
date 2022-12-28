@@ -187,6 +187,8 @@ const technologies = {
       'Styled Components',
       'Prettier',
       'Stylelint',
+      'Git',
+      'GitHub',
       'Vercel',
       'OpenWeatherMap',
     ],
