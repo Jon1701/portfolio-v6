@@ -284,6 +284,8 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
             demoHref="https://weather-9wlky8dr3-development-jonbaloncom.vercel.app/"
             githubHref="https://github.com/Jon1701/weather-app"
           />
+
+          <span />
         </GridLayout>
       </Content>
     </Container>
