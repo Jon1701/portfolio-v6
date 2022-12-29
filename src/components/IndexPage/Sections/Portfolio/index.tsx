@@ -320,7 +320,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
 
           <ProjectCard
             title="Portfolio V6"
-            description="The 6th iteration of my Portfolio."
+            description="The 6th iteration of my Portfolio. (WIP)"
             imageSrc={portfolioV6ImageURL}
             technologies={technologies.personal.portfoliov6}
             githubHref="https://github.com/Jon1701/portfolio-v6"
