@@ -64,11 +64,11 @@ const ContainerCompanyButtons = styled.ul`
  * Container for Work Experience details.
  */
 const ContainerExperienceDetails = styled.div`
-  flex-basis: 80%;
-
   background-color: #191919;
   box-shadow: rgb(0 0 0 / 20%) 0 2px 4px -1px, rgb(0 0 0 / 14%) 0 4px 5px 0,
     rgb(0 0 0 / 12%) 0 1px 10px 0;
+
+  width: 100%;
 `;
 
 export enum CompanyEnums {
