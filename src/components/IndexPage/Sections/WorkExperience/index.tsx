@@ -7,11 +7,6 @@ import WorkExperiencePanel from '@components/WorkExperience/Panel';
  * Component container.
  */
 const Container = styled.section`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-
   min-height: 100vh;
 `;
 
@@ -30,8 +25,8 @@ const Content = styled.div`
  * Section title.
  */
 const Title = styled.h2`
-  margin-top: 0;
   text-align: center;
+  margin: 50px 0;
 `;
 
 /**
