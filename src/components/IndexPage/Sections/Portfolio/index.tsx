@@ -15,6 +15,7 @@ import pmpGatewayDashboardImageURL from './assets/images/pmp-gateway-dashboard.p
 import pmpLogoURL from './assets/images/pmp-logo.png';
 import pmpSalesSiteImageURL from './assets/images/pmp-sales-site.png';
 import portfolioV6ImageURL from './assets/images/portfoliov6.png';
+import propertyReviewsImageURL from './assets/images/property-reviews.png';
 import weatherAppImageURL from './assets/images/weather-app.png';
 
 /**
@@ -204,6 +205,23 @@ const technologies = {
       'Git',
       'GitHub',
     ],
+    propertyReviews: [
+      'Go',
+      'Gonic',
+      'GORM',
+      'PostgreSQL',
+      'Docker',
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Axios',
+      'Styled Components',
+      'ESLint',
+      'Prettier',
+      'Stylelint',
+      'Git',
+      'GitHub',
+    ],
   },
 };
 
@@ -307,6 +325,16 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
             technologies={technologies.personal.portfoliov6}
             githubHref="https://github.com/Jon1701/portfolio-v6"
           />
+
+          <ProjectCard
+            title="Property Reviews App"
+            description="Full Stack Application which allows users to review residential properties. (WIP)"
+            imageSrc={propertyReviewsImageURL}
+            technologies={technologies.personal.propertyReviews}
+            githubHref="https://github.com/Jon1701/property-reviews"
+          />
+
+          <span />
         </GridLayout>
       </Content>
     </Container>
