@@ -37,7 +37,7 @@ const Title = styled.h2`
  * Content container.
  */
 const Content = styled.div`
-  max-width: 900px;
+  max-width: 1500px;
   margin: 0 auto;
   width: 100%;
 `;

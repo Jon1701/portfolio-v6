@@ -14,7 +14,7 @@ const Container = styled.section`
  * Container for component content.
  */
 const Content = styled.div`
-  max-width: 900px;
+  max-width: 1500px;
   margin: 0 auto;
   width: 100%;
 
