@@ -30,6 +30,7 @@ const Container = styled.section`
  */
 const Title = styled.h2`
   text-align: center;
+  margin: 50px 0;
 `;
 
 /**
@@ -61,21 +62,21 @@ const GridLayout = styled.div`
   }
 
   ${mobileBreakpoint`
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-  gap: 50px;
-  padding: 0 5px;
-`}
+    gap: 50px;
+    padding: 0 5px;
+  `}
 
   ${tabletBreakpoint`
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-  
-  gap: 1%;
-`}
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    
+    gap: 1%;
+  `}
 `;
 
 // Object containing List of Technologies for each Project.
