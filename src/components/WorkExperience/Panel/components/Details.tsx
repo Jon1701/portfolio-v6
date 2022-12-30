@@ -20,6 +20,13 @@ const Container = styled.article`
 `;
 
 /**
+ * Sets content to boldface using font variation.
+ */
+const Bold = styled.span`
+  font-family: 'Zen Maru Gothic Black', sans-serif;
+`;
+
+/**
  * Work Experience details.
  */
 const Details: React.FC<WorkExperienceEntry> = ({
@@ -33,17 +40,13 @@ const Details: React.FC<WorkExperienceEntry> = ({
 
   return (
     <Container>
-      <div>
-        {position} at {company}
-      </div>
-
+      <Bold>{position}</Bold> at <Bold>{company}</Bold>
       <div>
         {formattedStartDate} &#x2014;{' '}
         {endDate !== undefined
           ? format(endOfMonth(endDate), DATE_FORMAT_TOKEN)
           : 'present'}
       </div>
-
       <ul>
         {duties.map(item => {
           const key = item.trim().toLowerCase().replaceAll(' ', '-');
