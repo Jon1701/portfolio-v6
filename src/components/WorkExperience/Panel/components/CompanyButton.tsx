@@ -48,10 +48,12 @@ const StyledButton = styled.button<StyledButtonProps>`
   text-align: center;
   font-weight: 900;
 
+  filter: ${props => (props.isSelected ? 'brightness(200%)' : 'none')};
   transition: ease-in-out 0.2s;
 
   &:hover {
     background-color: #121212;
+    filter: brightness(200%);
 
     @media screen and (min-device-width: ${breakpoints.mobile
         .min}px) and (max-device-width: ${breakpoints.mobile.max}px) {
