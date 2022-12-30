@@ -23,6 +23,9 @@ import weatherAppImageURL from './assets/images/weather-app.png';
  */
 const Container = styled.section`
   min-height: 100vh;
+  background-color: #181818;
+
+  padding-bottom: 50px;
 `;
 
 /**
@@ -30,7 +33,8 @@ const Container = styled.section`
  */
 const Title = styled.h2`
   text-align: center;
-  margin: 50px 0;
+  margin: 0;
+  padding: 50px 0;
 `;
 
 /**
