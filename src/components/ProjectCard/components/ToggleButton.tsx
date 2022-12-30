@@ -21,6 +21,13 @@ const StyledButton = styled.button`
   padding: 15px 0;
 
   user-select: none;
+
+  transition: ease-in-out 0.2s;
+  font-weight: bold;
+
+  &:hover {
+    filter: brightness(150%);
+  }
 `;
 
 interface Props {

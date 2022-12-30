@@ -126,6 +126,9 @@ const ContainerImage = styled.div<ContainerImageProps>`
   }
 `;
 
+/**
+ * Logo.
+ */
 const LogoImage = styled.img`
   background-color: #fff;
 
