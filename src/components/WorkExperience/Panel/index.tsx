@@ -168,10 +168,14 @@ export const workHistory: WorkHistory = {
   },
 };
 
+interface Props {
+  scrollToSection(): void;
+}
+
 /**
  * Panel which displays Work Experience.
  */
-const WorkExperiencePanel = () => {
+const WorkExperiencePanel: React.FC<Props> = ({ scrollToSection }: Props) => {
   // Controls the currently selected company.
   const [selectedCompany, setSelectedCompany] = useState<CompanyEnums>(
     CompanyEnums.PricematePay
@@ -188,7 +192,10 @@ const WorkExperiencePanel = () => {
             isSelected={selectedCompany === CompanyEnums.PricematePay}
             companyEnum={CompanyEnums.PricematePay}
             logoURL={pricematepayLogoURL}
-            handleClick={() => setSelectedCompany(CompanyEnums.PricematePay)}
+            handleClick={() => {
+              scrollToSection();
+              setSelectedCompany(CompanyEnums.PricematePay);
+            }}
             text="Pricematepay"
             accentColor="#b3def5"
           />
@@ -198,9 +205,10 @@ const WorkExperiencePanel = () => {
             isSelected={selectedCompany === CompanyEnums.NavigateTechnologies}
             companyEnum={CompanyEnums.NavigateTechnologies}
             logoURL={navtechLogoURL}
-            handleClick={() =>
-              setSelectedCompany(CompanyEnums.NavigateTechnologies)
-            }
+            handleClick={() => {
+              scrollToSection();
+              setSelectedCompany(CompanyEnums.NavigateTechnologies);
+            }}
             text="Navigate Technologies"
             accentColor="#23c2b1"
           />
@@ -210,7 +218,10 @@ const WorkExperiencePanel = () => {
             isSelected={selectedCompany === CompanyEnums.Mansfield}
             companyEnum={CompanyEnums.Mansfield}
             logoURL={mansfieldLogoURL}
-            handleClick={() => setSelectedCompany(CompanyEnums.Mansfield)}
+            handleClick={() => {
+              scrollToSection();
+              setSelectedCompany(CompanyEnums.Mansfield);
+            }}
             text="Mansfield"
             accentColor="#df3226"
           />

@@ -15,6 +15,10 @@ import LandingSection from '@components/IndexPage/Sections/Landing';
 import ProjectsSection from '@components/IndexPage/Sections/Projects';
 import WorkExperience from '@components/IndexPage/Sections/WorkExperience';
 
+const scrollConfig: ScrollIntoViewOptions = {
+  behavior: 'smooth',
+};
+
 /**
  * Elements to appear in the <head> tag.
  */
@@ -33,29 +37,36 @@ export const Head: React.FC<HeadProps> = () => {
 };
 
 /**
+ * Scrolls to the top of a given element..
+ *
+ * @param ref Element reference.
+ */
+const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
+  ref.current?.scrollIntoView(scrollConfig);
+};
+
+/**
  * Index page.
  */
 const IndexPage: React.FC<PageProps> = () => {
-  // Reference to the Projects Section element.
+  // Reference to section elements.
   const refProjectsSection = useRef<HTMLElement>(null);
-
-  // Reference to Work History Section element.
   const refWorkExperienceSection = useRef<HTMLElement>(null);
-
-  /**
-   * Scrolls to the Projects section.
-   */
-  const scrollToProjectsSection = () => {
-    refProjectsSection.current?.scrollIntoView({
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <main>
-      <LandingSection scrollToProjectsSection={scrollToProjectsSection} />
+      <LandingSection
+        scrollToProjectsSection={() => {
+          scrollToSection(refProjectsSection);
+        }}
+      />
       <ProjectsSection ref={refProjectsSection} />
-      <WorkExperience ref={refWorkExperienceSection} />
+      <WorkExperience
+        ref={refWorkExperienceSection}
+        scrollToSection={() => {
+          scrollToSection(refWorkExperienceSection);
+        }}
+      />
       <ContactSection />
     </main>
   );

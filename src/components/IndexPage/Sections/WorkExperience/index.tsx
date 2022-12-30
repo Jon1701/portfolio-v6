@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import WorkExperiencePanel from '@components/WorkExperience/Panel';
@@ -29,19 +29,28 @@ const Title = styled.h2`
   margin: 50px 0;
 `;
 
+interface Props {
+  /**
+   * Function to scroll to the top of the Section.
+   */
+  scrollToSection(): void;
+}
+
 /**
  * Work Experience section.
  */
-const WorkExperienceSection = React.forwardRef<HTMLElement>((props, ref) => {
-  return (
-    <Container ref={ref}>
-      <Content>
-        <Title>Where I've Worked</Title>
+const WorkExperienceSection = React.forwardRef<HTMLElement, Props>(
+  ({ scrollToSection }: Props, ref) => {
+    return (
+      <Container ref={ref}>
+        <Content>
+          <Title>Where I've Worked</Title>
 
-        <WorkExperiencePanel />
-      </Content>
-    </Container>
-  );
-});
+          <WorkExperiencePanel scrollToSection={scrollToSection} />
+        </Content>
+      </Container>
+    );
+  }
+);
 
 export default WorkExperienceSection;
