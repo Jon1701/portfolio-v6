@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { mobileBreakpoint } from '@util/breakpoints';
 
 import bgURL from './assets/background.jpg';
-import ViewMyPortfolioButton from './components/ViewMyPortfolioButton';
+import ViewPortfolioButton from './components/ViewPortfolioButton';
 
 /**
  * Component container.
@@ -82,16 +82,16 @@ const Description = styled.div`
 
 interface Props {
   /**
-   * Function to scroll to the Portfolio section.
+   * Function to scroll to the Projects section.
    */
-  scrollToPortfolioSection(): void;
+  scrollToProjectsSection(): void;
 }
 
 /**
  * Index Page Landing Section.
  */
 const LandingSection: React.FC<Props> = ({
-  scrollToPortfolioSection,
+  scrollToProjectsSection,
 }: Props) => {
   return (
     <Container>
@@ -105,7 +105,7 @@ const LandingSection: React.FC<Props> = ({
           </div>
         </Description>
 
-        <ViewMyPortfolioButton handleClick={scrollToPortfolioSection} />
+        <ViewPortfolioButton handleClick={scrollToProjectsSection} />
       </Content>
     </Container>
   );

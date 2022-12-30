@@ -12,7 +12,7 @@ import {
 } from '@components/IndexPage/SEO';
 import ContactSection from '@components/IndexPage/Sections/Contact';
 import LandingSection from '@components/IndexPage/Sections/Landing';
-import PortfolioSection from '@components/IndexPage/Sections/Portfolio';
+import ProjectsSection from '@components/IndexPage/Sections/Projects';
 import WorkExperience from '@components/IndexPage/Sections/WorkExperience';
 
 /**
@@ -36,22 +36,22 @@ export const Head: React.FC<HeadProps> = () => {
  * Index page.
  */
 const IndexPage: React.FC<PageProps> = () => {
-  // Reference to the Portfolio Section element.
-  const refPortfolioSection = useRef<HTMLElement>(null);
+  // Reference to the Projects Section element.
+  const refProjectsSection = useRef<HTMLElement>(null);
 
   /**
-   * Scrolls to the Portfolio section.
+   * Scrolls to the Projects section.
    */
-  const scrollToPortfolioSection = () => {
-    refPortfolioSection.current?.scrollIntoView({
+  const scrollToProjectsSection = () => {
+    refProjectsSection.current?.scrollIntoView({
       behavior: 'smooth',
     });
   };
 
   return (
     <main>
-      <LandingSection scrollToPortfolioSection={scrollToPortfolioSection} />
-      <PortfolioSection ref={refPortfolioSection} />
+      <LandingSection scrollToProjectsSection={scrollToProjectsSection} />
+      <ProjectsSection ref={refProjectsSection} />
       <WorkExperience />
       <ContactSection />
     </main>

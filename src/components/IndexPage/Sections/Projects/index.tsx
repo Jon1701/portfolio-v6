@@ -331,9 +331,9 @@ const GridLayout = styled.div`
 `;
 
 /**
- * Portfolio section which displays projects I've worked on.
+ * Projects section which displays projects I've worked on.
  */
-const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
+const ProjectsSection = React.forwardRef<HTMLElement>((props, ref) => {
   return (
     <Container ref={ref}>
       <Content>
@@ -374,4 +374,4 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
   );
 });
 
-export default PortfolioSection;
+export default ProjectsSection;

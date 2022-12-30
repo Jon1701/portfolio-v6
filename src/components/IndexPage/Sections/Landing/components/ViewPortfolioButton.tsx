@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 
+/**
+ * Styled button.
+ */
 const StyledButton = styled.button`
   all: unset;
 
@@ -19,6 +22,9 @@ const StyledButton = styled.button`
   }
 `;
 
+/**
+ * Defined the layout of the button content.
+ */
 const Layout = styled.div`
   display: flex;
   flex-flow: row nowrap;
@@ -36,7 +42,10 @@ interface Props {
   handleClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const ViewMyPortfolioButton: React.FC<Props> = ({ handleClick }: Props) => {
+/**
+ * View Portfolio button.
+ */
+const ViewPortfolioButton: React.FC<Props> = ({ handleClick }: Props) => {
   return (
     <StyledButton onClick={handleClick}>
       <Layout>
@@ -47,4 +56,4 @@ const ViewMyPortfolioButton: React.FC<Props> = ({ handleClick }: Props) => {
   );
 };
 
-export default ViewMyPortfolioButton;
+export default ViewPortfolioButton;
