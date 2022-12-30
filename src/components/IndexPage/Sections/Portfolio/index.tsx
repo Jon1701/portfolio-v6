@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ProjectCard from '@components/ProjectCard';
+import ProjectCard, { ProjectDetails } from '@components/ProjectCard';
 import { mobileBreakpoint, tabletBreakpoint } from '@util/breakpoints';
 
 import byTheNumbersImageURL from './assets/images/by-the-numbers.png';
 import evoMemberPortalImageURL from './assets/images/evo-member-portal.png';
 import evoPluginImageURL from './assets/images/evo-plugin.png';
 import evoWebsiteImageURL from './assets/images/evo-website.png';
-import Logo from './components/Logo';
 import mansfieldLogoURL from './assets/images/mansfield-logo.png';
 import navTechLogoURL from './assets/images/navtech-logo.png';
 import pmpGatewayDashboardImageURL from './assets/images/pmp-gateway-dashboard.png';
@@ -17,6 +16,254 @@ import pmpSalesSiteImageURL from './assets/images/pmp-sales-site.png';
 import portfolioV6ImageURL from './assets/images/portfoliov6.png';
 import propertyReviewsImageURL from './assets/images/property-reviews.png';
 import weatherAppImageURL from './assets/images/weather-app.png';
+
+// Project lookup IDs.
+export enum ProjectIDEnums {
+  PricematepayGatewayDashboard = 'PricematePayGatewayDashboard',
+  PricematepaySalesSite = 'PricematepaySalesSite',
+  NavigateTechnologiesEVOPlugin = 'NavigateTechnologiesEVOPlugin',
+  NavigateTechnologiesEVOProductSite = 'NavigateTechnologiesEVOProductSite',
+  NavigateTechnologiesEVOMemberPortal = 'NavigateTechnologiesEVOMemberPortal',
+  MansfieldByTheNumbers = 'MansfieldByTheNumbers',
+  PersonalProjectWeatherApp = 'PersonalProjectWeatherApp',
+  PersonalProjectPropertyReviewsApp = 'PersonalProjectPropertyReviewsApp',
+  PersonalProjectPortfolioV6 = 'PersonalProjectPortfolioV6',
+}
+
+// Combines all Projects into one object by Project lookup ID.
+export interface ProjectHistory {
+  [ProjectIDEnums.PricematepayGatewayDashboard]: ProjectDetails;
+  [ProjectIDEnums.PricematepaySalesSite]: ProjectDetails;
+  [ProjectIDEnums.NavigateTechnologiesEVOPlugin]: ProjectDetails;
+  [ProjectIDEnums.NavigateTechnologiesEVOProductSite]: ProjectDetails;
+  [ProjectIDEnums.NavigateTechnologiesEVOMemberPortal]: ProjectDetails;
+  [ProjectIDEnums.MansfieldByTheNumbers]: ProjectDetails;
+  [ProjectIDEnums.PersonalProjectWeatherApp]: ProjectDetails;
+  [ProjectIDEnums.PersonalProjectPropertyReviewsApp]: ProjectDetails;
+  [ProjectIDEnums.PersonalProjectPortfolioV6]: ProjectDetails;
+}
+
+// All projects.
+const projects: ProjectHistory = {
+  [ProjectIDEnums.PricematepayGatewayDashboard]: {
+    title: 'Pricematepay Gateway Dashboard',
+    description:
+      'Payment processing and Hosted Invoicing solution that enables organizations to handle credit card payments for their clients.',
+    imageURL: pmpGatewayDashboardImageURL,
+    technologies: [
+      'React',
+      'React Router',
+      'Redux',
+      'Styled Components',
+      'Format.js',
+      'Chart.js',
+      'Sass',
+      'ESLint',
+      'Prettier',
+      'Stylelint',
+      'Jest',
+      'Enzyme',
+      'Docker',
+      'Webpack',
+      'Babel',
+      'Git',
+      'Gerrit',
+      'Jenkins CI/CD',
+    ],
+    logoImageURL: pmpLogoURL,
+    logoAltText: 'Developed at Pricematepay',
+    demoLink: 'https://gateway.pricematepay.com/',
+  },
+  [ProjectIDEnums.PricematepaySalesSite]: {
+    title: 'Pricematepay Sales Site',
+    description:
+      'Product information site highlighting the features of the Payment Gateway  to aid the Sales Team in client acquisition.',
+    imageURL: pmpSalesSiteImageURL,
+    technologies: [
+      'React',
+      'Gatsby.js',
+      'Styled Components',
+      'Format.js',
+      'Sass',
+      'ESLint',
+      'Prettier',
+      'Stylelint',
+      'Docker',
+      'Webpack',
+      'Git',
+      'Gerrit',
+      'Jenkins CI/CD',
+    ],
+    logoImageURL: pmpLogoURL,
+    logoAltText: 'Developed at Pricematepay',
+    demoLink: 'https://pricematepay.com/',
+  },
+  [ProjectIDEnums.NavigateTechnologiesEVOPlugin]: {
+    title: 'EVO SEO WordPress Plugin',
+    description:
+      'WordPress Plugin to seamlessly add Search Engine Optimizations to a WordPress web property without extensive technical knowledge.',
+    imageURL: evoPluginImageURL,
+    technologies: [
+      'PHP',
+      'WordPress',
+      'MySQL',
+      'jQuery',
+      'Chart.js',
+      'Sass',
+      'PostCSS',
+      'Autoprefixer',
+      'ESLint',
+      'Stylelint',
+      'PHPUnit',
+      'Docker',
+      'Webpack',
+      'Babel',
+      'Gulp',
+      'Git',
+      'GitHub',
+      'Travis CI',
+    ],
+    logoImageURL: navTechLogoURL,
+    logoAltText: 'Developed at Navigate Technologies',
+  },
+  [ProjectIDEnums.NavigateTechnologiesEVOMemberPortal]: {
+    title: 'EVO SEO Member Portal',
+    description:
+      'Paid value-add for the EVO SEO WordPress plugin which facilitated seamless integration with Google Search Console and Google Analytics.',
+    imageURL: evoMemberPortalImageURL,
+    technologies: [
+      'React',
+      'React Router',
+      'Redux',
+      'Chart.js',
+      'Sass',
+      'PostCSS',
+      'Autoprefixer',
+      'ESLint',
+      'Stylelint',
+      'Docker',
+      'Webpack',
+      'Babel',
+      'Mocha.js',
+      'Chai.js',
+      'Git',
+      'GitHub',
+      'Travis CI',
+    ],
+    logoImageURL: navTechLogoURL,
+    logoAltText: 'Developed at Navigate Technologies',
+  },
+  [ProjectIDEnums.NavigateTechnologiesEVOProductSite]: {
+    title: 'EVO SEO Product Site',
+    description:
+      'Product information site detailing the features and pricing of the EVO SEO WordPress Plugin.',
+    imageURL: evoWebsiteImageURL,
+    technologies: [
+      'PHP',
+      'WordPress',
+      'MySQL',
+      'Sass',
+      'PostCSS',
+      'Autoprefixer',
+      'ESLint',
+      'Stylelint',
+      'Webpack',
+      'Gulp',
+      'PHPUnit',
+      'Docker',
+      'Git',
+      'GitHub',
+      'Travis CI',
+    ],
+    logoImageURL: navTechLogoURL,
+    logoAltText: 'Developed at Navigate Technologies',
+  },
+  [ProjectIDEnums.MansfieldByTheNumbers]: {
+    title: 'Sentry By The Numbers',
+    description:
+      'Data fetching algorithm to generate infographics from official NHL game data.',
+    imageURL: byTheNumbersImageURL,
+    technologies: ['Python', 'Flask', 'Amazon EC2', 'MongoDB', 'SVN'],
+    logoImageURL: mansfieldLogoURL,
+    logoAltText: 'Developed at Mansfield Inc.',
+  },
+  [ProjectIDEnums.PersonalProjectWeatherApp]: {
+    title: 'Weather App',
+    description: 'A simple web application to display the weather.',
+    imageURL: weatherAppImageURL,
+    technologies: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Node.js',
+      'Express.js',
+      'ESLint',
+      'Styled Components',
+      'Prettier',
+      'Stylelint',
+      'Git',
+      'GitHub',
+      'Vercel',
+      'OpenWeatherMap',
+    ],
+    demoLink: 'https://weather-9wlky8dr3-development-jonbaloncom.vercel.app/',
+    githubLink: 'https://github.com/Jon1701/weather-app',
+  },
+  [ProjectIDEnums.PersonalProjectPortfolioV6]: {
+    title: 'Portfolio V6',
+    description: 'The 6th iteration of my Portfolio. (WIP)',
+    imageURL: portfolioV6ImageURL,
+    technologies: [
+      'React',
+      'TypeScript',
+      'Gatsby.js',
+      'Styled Components',
+      'ESLint',
+      'Prettier',
+      'Stylelint',
+      'Git',
+      'GitHub',
+    ],
+    githubLink: 'https://github.com/Jon1701/portfolio-v6',
+  },
+  [ProjectIDEnums.PersonalProjectPropertyReviewsApp]: {
+    title: 'Property Reviews App',
+    description:
+      'Full Stack Application which allows users to review residential properties. (WIP)',
+    imageURL: propertyReviewsImageURL,
+    technologies: [
+      'Go',
+      'Gonic',
+      'GORM',
+      'PostgreSQL',
+      'Docker',
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Axios',
+      'Styled Components',
+      'ESLint',
+      'Prettier',
+      'Stylelint',
+      'Git',
+      'GitHub',
+    ],
+    githubLink: 'https://github.com/Jon1701/property-reviews',
+  },
+};
+
+// Order of Projects to be displayed.
+const projectOrder = [
+  ProjectIDEnums.PricematepayGatewayDashboard,
+  ProjectIDEnums.PricematepaySalesSite,
+  ProjectIDEnums.NavigateTechnologiesEVOPlugin,
+  ProjectIDEnums.NavigateTechnologiesEVOMemberPortal,
+  ProjectIDEnums.NavigateTechnologiesEVOProductSite,
+  ProjectIDEnums.MansfieldByTheNumbers,
+  ProjectIDEnums.PersonalProjectWeatherApp,
+  ProjectIDEnums.PersonalProjectPortfolioV6,
+  ProjectIDEnums.PersonalProjectPropertyReviewsApp,
+];
 
 /**
  * Component container.
@@ -83,153 +330,6 @@ const GridLayout = styled.div`
   `}
 `;
 
-// Object containing List of Technologies for each Project.
-const technologies = {
-  pricematePay: {
-    gatewayDashboard: [
-      'React',
-      'React Router',
-      'Redux',
-      'Styled Components',
-      'Format.js',
-      'Chart.js',
-      'Sass',
-      'ESLint',
-      'Prettier',
-      'Stylelint',
-      'Jest',
-      'Enzyme',
-      'Docker',
-      'Webpack',
-      'Babel',
-      'Git',
-      'Gerrit',
-      'Jenkins CI/CD',
-    ],
-    salesSite: [
-      'React',
-      'Gatsby.js',
-      'Styled Components',
-      'Format.js',
-      'Sass',
-      'ESLint',
-      'Prettier',
-      'Stylelint',
-      'Docker',
-      'Webpack',
-      'Git',
-      'Gerrit',
-      'Jenkins CI/CD',
-    ],
-  },
-  navtech: {
-    plugin: [
-      'PHP',
-      'WordPress',
-      'MySQL',
-      'jQuery',
-      'Chart.js',
-      'Sass',
-      'PostCSS',
-      'Autoprefixer',
-      'ESLint',
-      'Stylelint',
-      'PHPUnit',
-      'Docker',
-      'Webpack',
-      'Babel',
-      'Gulp',
-      'Git',
-      'GitHub',
-      'Travis CI',
-    ],
-    memberPortal: [
-      'React',
-      'React Router',
-      'Redux',
-      'Chart.js',
-      'Sass',
-      'PostCSS',
-      'Autoprefixer',
-      'ESLint',
-      'Stylelint',
-      'Docker',
-      'Webpack',
-      'Babel',
-      'Mocha.js',
-      'Chai.js',
-      'Git',
-      'GitHub',
-      'Travis CI',
-    ],
-    productSite: [
-      'PHP',
-      'WordPress',
-      'MySQL',
-      'Sass',
-      'PostCSS',
-      'Autoprefixer',
-      'ESLint',
-      'Stylelint',
-      'Webpack',
-      'Gulp',
-      'PHPUnit',
-      'Docker',
-      'Git',
-      'GitHub',
-      'Travis CI',
-    ],
-  },
-  mansfield: {
-    byTheNumbers: ['Python', 'Flask', 'Amazon EC2', 'MongoDB', 'SVN'],
-  },
-  personal: {
-    weatherApp: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Node.js',
-      'Express.js',
-      'ESLint',
-      'Styled Components',
-      'Prettier',
-      'Stylelint',
-      'Git',
-      'GitHub',
-      'Vercel',
-      'OpenWeatherMap',
-    ],
-    portfoliov6: [
-      'React',
-      'TypeScript',
-      'Gatsby.js',
-      'Styled Components',
-      'ESLint',
-      'Prettier',
-      'Stylelint',
-      'Git',
-      'GitHub',
-    ],
-    propertyReviews: [
-      'Go',
-      'Gonic',
-      'GORM',
-      'PostgreSQL',
-      'Docker',
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Axios',
-      'Styled Components',
-      'ESLint',
-      'Prettier',
-      'Stylelint',
-      'Git',
-      'GitHub',
-    ],
-  },
-};
-
 /**
  * Portfolio section which displays projects I've worked on.
  */
@@ -240,104 +340,32 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
         <Title>What I've Built Throughout My Career</Title>
 
         <GridLayout>
-          <ProjectCard
-            title="Pricematepay Gateway Dashboard"
-            description="Payment processing and Hosted Invoicing solution that enables organizations to handle credit card payments for their clients."
-            imageSrc={pmpGatewayDashboardImageURL}
-            LogoElement={
-              <Logo src={pmpLogoURL} altText="Developed at Pricematepay" />
-            }
-            technologies={technologies.pricematePay.gatewayDashboard}
-            demoHref="https://gateway.pricematepay.com/"
-          />
+          {projectOrder.map((id: ProjectIDEnums) => {
+            const {
+              title,
+              description,
+              imageURL,
+              technologies,
+              logoImageURL,
+              logoAltText,
+              demoLink,
+              githubLink,
+            } = projects[id];
 
-          <ProjectCard
-            title="Pricematepay Sales Site"
-            description="Product information site highlighting the features of the Payment Gateway  to aid the Sales Team in client acquisition."
-            imageSrc={pmpSalesSiteImageURL}
-            LogoElement={
-              <Logo src={pmpLogoURL} altText="Developed at Pricematepay" />
-            }
-            technologies={technologies.pricematePay.salesSite}
-            demoHref="https://pricematepay.com/"
-          />
-
-          <ProjectCard
-            title="EVO SEO WordPress Plugin"
-            description="WordPress Plugin to seamlessly add Search Engine Optimizations to a WordPress web property without extensive technical knowledge."
-            imageSrc={evoPluginImageURL}
-            LogoElement={
-              <Logo
-                src={navTechLogoURL}
-                altText="Developed at Navigate Technologies"
+            return (
+              <ProjectCard
+                key={id}
+                title={title}
+                description={description}
+                imageURL={imageURL}
+                technologies={technologies}
+                logoImageURL={logoImageURL}
+                logoAltText={logoAltText}
+                demoLink={demoLink}
+                githubLink={githubLink}
               />
-            }
-            technologies={technologies.navtech.plugin}
-          />
-
-          <ProjectCard
-            title="EVO SEO Member Portal"
-            description="Paid value-add for the EVO SEO WordPress plugin which facilitated seamless integration with Google Search Console and Google Analytics."
-            imageSrc={evoMemberPortalImageURL}
-            LogoElement={
-              <Logo
-                src={navTechLogoURL}
-                altText="Developed at Navigate Technologies"
-              />
-            }
-            technologies={technologies.navtech.memberPortal}
-          />
-
-          <ProjectCard
-            title="EVO SEO Product Site"
-            description="Product information site detailing the features and pricing of the EVO SEO WordPress Plugin."
-            imageSrc={evoWebsiteImageURL}
-            LogoElement={
-              <Logo
-                src={navTechLogoURL}
-                altText="Developed at Navigate Technologies"
-              />
-            }
-            technologies={technologies.navtech.productSite}
-          />
-
-          <ProjectCard
-            title="Sentry By The Numbers"
-            description="Data fetching algorithm to generate infographics from official NHL game data."
-            imageSrc={byTheNumbersImageURL}
-            LogoElement={
-              <Logo
-                src={mansfieldLogoURL}
-                altText="Developed at Mansfield Inc."
-              />
-            }
-            technologies={technologies.mansfield.byTheNumbers}
-          />
-
-          <ProjectCard
-            title="Weather App"
-            description="A simple web application to display the weather."
-            imageSrc={weatherAppImageURL}
-            technologies={technologies.personal.weatherApp}
-            demoHref="https://weather-9wlky8dr3-development-jonbaloncom.vercel.app/"
-            githubHref="https://github.com/Jon1701/weather-app"
-          />
-
-          <ProjectCard
-            title="Portfolio V6"
-            description="The 6th iteration of my Portfolio. (WIP)"
-            imageSrc={portfolioV6ImageURL}
-            technologies={technologies.personal.portfoliov6}
-            githubHref="https://github.com/Jon1701/portfolio-v6"
-          />
-
-          <ProjectCard
-            title="Property Reviews App"
-            description="Full Stack Application which allows users to review residential properties. (WIP)"
-            imageSrc={propertyReviewsImageURL}
-            technologies={technologies.personal.propertyReviews}
-            githubHref="https://github.com/Jon1701/property-reviews"
-          />
+            );
+          })}
 
           <span />
         </GridLayout>

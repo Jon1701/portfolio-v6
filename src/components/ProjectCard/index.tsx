@@ -9,9 +9,9 @@ import {
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import ToggleButton from './components/ToggleButton';
-import ListOfTechnologies from './components/ListOfTechnologies';
 import ExternalLinkButton from './components/ExternalLinkButton';
+import ListOfTechnologies from './components/ListOfTechnologies';
+import ToggleButton from './components/ToggleButton';
 
 /**
  * Component container.
@@ -23,42 +23,47 @@ const Container = styled.article`
 
   width: 100%;
 `;
-
-interface Props {
+// Describes the Project Details object.
+export interface ProjectDetails {
   /**
-   * Project title.
+   * Title.
    */
   title: string;
 
   /**
-   * Project description.
+   * Description.
    */
   description: string;
 
   /**
    * URL of the image.
    */
-  imageSrc: string;
-
-  /**
-   * Logo Element.
-   */
-  LogoElement?: React.ReactElement;
+  imageURL: string;
 
   /**
    * Array of technologies used.
    */
-  technologies?: Array<string>;
+  technologies: Array<string>;
 
   /**
-   * Link to demo site.
+   * URL of the logo.
    */
-  demoHref?: string;
+  logoImageURL?: string;
 
   /**
-   * Link to GitHub repository.
+   * Alt text of the logo.
    */
-  githubHref?: string;
+  logoAltText?: string;
+
+  /**
+   * Link to a live demo.
+   */
+  demoLink?: string;
+
+  /**
+   * Link to the GitHub repository.
+   */
+  githubLink?: string;
 }
 
 /**
@@ -121,6 +126,28 @@ const ContainerImage = styled.div<ContainerImageProps>`
   }
 `;
 
+const LogoImage = styled.img`
+  background-color: #fff;
+
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 2;
+
+  max-width: 150px;
+
+  border: solid 1px #000;
+  padding: 5px;
+
+  ${mobileBreakpoint`
+    bottom: 2px;
+    right: 2px;
+
+    max-width: 115px;
+    padding: 3px;
+  `}
+`;
+
 /**
  * Figure caption.
  */
@@ -150,15 +177,16 @@ const ContainerButtons = styled.div`
 /**
  * Card which displays Project information.
  */
-const ProjectCard: React.FC<Props> = ({
+const ProjectCard: React.FC<ProjectDetails> = ({
   title,
   description,
-  imageSrc,
-  LogoElement,
+  imageURL,
   technologies,
-  demoHref,
-  githubHref,
-}: Props) => {
+  logoImageURL,
+  logoAltText,
+  demoLink,
+  githubLink,
+}: ProjectDetails) => {
   // Controls the visibility of the List of Technologies element.
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
@@ -166,25 +194,31 @@ const ProjectCard: React.FC<Props> = ({
     <Container>
       <Title>{title}</Title>
       <Figure>
-        <ContainerImage imageSrc={imageSrc} role="img" title={description}>
-          {LogoElement || undefined}
+        <ContainerImage imageSrc={imageURL} role="img" title={description}>
+          {logoImageURL !== undefined ? (
+            <LogoImage src={logoImageURL} alt={logoAltText} />
+          ) : undefined}
         </ContainerImage>
         <FigCaption>{description}</FigCaption>
       </Figure>
 
-      <ContainerButtons>
-        {demoHref !== undefined ? (
-          <ExternalLinkButton href={demoHref} faIcon={faArrowUpRightFromSquare}>
-            <React.Fragment>View Demo</React.Fragment>
-          </ExternalLinkButton>
-        ) : undefined}
+      {demoLink !== undefined || githubLink !== undefined ? (
+        <ContainerButtons>
+          {demoLink !== undefined ? (
+            <ExternalLinkButton
+              href={demoLink}
+              faIcon={faArrowUpRightFromSquare}>
+              <React.Fragment>View Demo</React.Fragment>
+            </ExternalLinkButton>
+          ) : undefined}
 
-        {githubHref !== undefined ? (
-          <ExternalLinkButton href={githubHref} faIcon={faGithub}>
-            <React.Fragment>View Code</React.Fragment>
-          </ExternalLinkButton>
-        ) : undefined}
-      </ContainerButtons>
+          {githubLink !== undefined ? (
+            <ExternalLinkButton href={githubLink} faIcon={faGithub}>
+              <React.Fragment>View Code</React.Fragment>
+            </ExternalLinkButton>
+          ) : undefined}
+        </ContainerButtons>
+      ) : undefined}
 
       {isVisible && technologies !== undefined && technologies.length > 0 ? (
         <ListOfTechnologies items={technologies} />
