@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
 import {
@@ -61,14 +61,25 @@ const ContainerCompanyButtons = styled.ul`
 `;
 
 /**
+ * Describes props for Container Experience Details component.
+ */
+interface ContainerExperienceDetailsProps {
+  /**
+   * Minimum height of the container.
+   */
+  minHeight: number;
+}
+
+/**
  * Container for Work Experience details.
  */
-const ContainerExperienceDetails = styled.div`
+const ContainerExperienceDetails = styled.div<ContainerExperienceDetailsProps>`
   background-color: #191919;
   box-shadow: rgb(0 0 0 / 20%) 0 2px 4px -1px, rgb(0 0 0 / 14%) 0 4px 5px 0,
     rgb(0 0 0 / 12%) 0 1px 10px 0;
 
   width: 100%;
+  min-height: ${props => props.minHeight}px;
 `;
 
 export enum CompanyEnums {
@@ -168,25 +179,51 @@ export const workHistory: WorkHistory = {
   },
 };
 
+/**
+ * Describes component props.
+ */
 interface Props {
+  /**
+   * Function to scroll to the top of the section.
+   */
   scrollToSection(): void;
 }
+
+// Default value of the minimum height.
+const minHeightDefaultValue: number = 0;
 
 /**
  * Panel which displays Work Experience.
  */
 const WorkExperiencePanel: React.FC<Props> = ({ scrollToSection }: Props) => {
+  // Reference to the Container Company Buttons element.
+  const refContainerCompanyButtons = useRef<HTMLUListElement>(null);
+
+  // Controls the minimum height of the Container Company Buttons element.
+  const [minHeight, setMinHeight] = useState<number>(minHeightDefaultValue);
+
   // Controls the currently selected company.
   const [selectedCompany, setSelectedCompany] = useState<CompanyEnums>(
     CompanyEnums.PricematePay
   );
 
+  // Destructure Work History.
   const { position, company, startDate, endDate, duties } =
     workHistory[selectedCompany];
 
+  useEffect(() => {
+    if (refContainerCompanyButtons === null) {
+      return;
+    }
+
+    setMinHeight(
+      refContainerCompanyButtons.current?.offsetHeight || minHeightDefaultValue
+    );
+  }, [refContainerCompanyButtons]);
+
   return (
     <Container>
-      <ContainerCompanyButtons>
+      <ContainerCompanyButtons ref={refContainerCompanyButtons}>
         <li>
           <CompanyButton
             isSelected={selectedCompany === CompanyEnums.PricematePay}
@@ -229,7 +266,7 @@ const WorkExperiencePanel: React.FC<Props> = ({ scrollToSection }: Props) => {
         <span />
       </ContainerCompanyButtons>
 
-      <ContainerExperienceDetails>
+      <ContainerExperienceDetails minHeight={minHeight}>
         <Details
           position={position}
           company={company}
