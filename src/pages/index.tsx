@@ -39,6 +39,9 @@ const IndexPage: React.FC<PageProps> = () => {
   // Reference to the Projects Section element.
   const refProjectsSection = useRef<HTMLElement>(null);
 
+  // Reference to Work History Section element.
+  const refWorkExperienceSection = useRef<HTMLElement>(null);
+
   /**
    * Scrolls to the Projects section.
    */
@@ -52,7 +55,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <main>
       <LandingSection scrollToProjectsSection={scrollToProjectsSection} />
       <ProjectsSection ref={refProjectsSection} />
-      <WorkExperience />
+      <WorkExperience ref={refWorkExperienceSection} />
       <ContactSection />
     </main>
   );

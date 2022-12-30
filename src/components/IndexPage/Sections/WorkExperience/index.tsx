@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 
 import WorkExperiencePanel from '@components/WorkExperience/Panel';
@@ -32,9 +32,9 @@ const Title = styled.h2`
 /**
  * Work Experience section.
  */
-const WorkExperience = () => {
+const WorkExperienceSection = React.forwardRef<HTMLElement>((props, ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <Content>
         <Title>Where I've Worked</Title>
 
@@ -42,6 +42,6 @@ const WorkExperience = () => {
       </Content>
     </Container>
   );
-};
+});
 
-export default WorkExperience;
+export default WorkExperienceSection;
