@@ -242,7 +242,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
         <GridLayout>
           <ProjectCard
             title="Pricematepay Gateway Dashboard"
-            description="Payment processing and Invoicing solution allowing organizations to handle credit card payments for their clients."
+            description="Payment processing and Hosted Invoicing solution that enables organizations to handle credit card payments for their clients."
             imageSrc={pmpGatewayDashboardImageURL}
             LogoElement={
               <Logo src={pmpLogoURL} altText="Developed at Pricematepay" />
@@ -253,7 +253,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
 
           <ProjectCard
             title="Pricematepay Sales Site"
-            description="Product information site highlighting the features of the Payment Gateway Platform to aid the Sales Team in client acquisition."
+            description="Product information site highlighting the features of the Payment Gateway  to aid the Sales Team in client acquisition."
             imageSrc={pmpSalesSiteImageURL}
             LogoElement={
               <Logo src={pmpLogoURL} altText="Developed at Pricematepay" />
@@ -264,7 +264,7 @@ const PortfolioSection = React.forwardRef<HTMLElement>((props, ref) => {
 
           <ProjectCard
             title="EVO SEO WordPress Plugin"
-            description="Plugin to seamlessly add Search Engine Optimizations to a WordPress web property with minimal technical knowledge."
+            description="WordPress Plugin to seamlessly add Search Engine Optimizations to a WordPress web property without extensive technical knowledge."
             imageSrc={evoPluginImageURL}
             LogoElement={
               <Logo
