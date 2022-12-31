@@ -1,49 +1,79 @@
-import * as React from 'react';
-import { Link, HeadFC, PageProps } from 'gatsby';
+import React from 'react';
+import type { PageProps, HeadProps } from 'gatsby';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
+/**
+ * Component container.
+ */
+const Container = styled.main`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4,
-};
+  width: 100%;
+  height: 100vh;
+`;
 
+/**
+ * Content container.
+ */
+const Content = styled.div`
+  max-width: 500px;
+  width: 100%;
+  padding: 5px;
+
+  text-align: center;
+`;
+
+/**
+ * Styled header.
+ */
+const H1 = styled.h1`
+  display: block;
+  font-size: 2rem;
+`;
+
+/**
+ * Styled Gatsby Link.
+ */
+const StyledLink = styled(Link)`
+  display: inline-block;
+  border: solid 1px #c4c7c5;
+  padding: 20px;
+
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    background-color: #000;
+  }
+`;
+
+/**
+ * 404 page.
+ */
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === 'development' ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Container>
+      <Content>
+        <H1>Page Not Found</H1>
+
+        <StyledLink to="/">Go to the home page</StyledLink>
+      </Content>
+    </Container>
   );
 };
 
 export default NotFoundPage;
 
-export const Head: HeadFC = () => <title>Not found</title>;
+/**
+ * Elements to appear in the <head> tag.
+ */
+export const Head: React.FC<HeadProps> = () => {
+  return (
+    <React.Fragment>
+      <title>Page Not Found</title>
+    </React.Fragment>
+  );
+};
