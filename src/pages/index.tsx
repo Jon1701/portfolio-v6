@@ -52,6 +52,7 @@ const IndexPage: React.FC<PageProps> = () => {
   // Reference to section elements.
   const refProjectsSection = useRef<HTMLElement>(null);
   const refWorkExperienceSection = useRef<HTMLElement>(null);
+  const refContactSection = useRef<HTMLElement>(null);
 
   return (
     <main>
@@ -67,7 +68,12 @@ const IndexPage: React.FC<PageProps> = () => {
           scrollToSection(refWorkExperienceSection);
         }}
       />
-      <ContactSection />
+      <ContactSection
+        ref={refContactSection}
+        scrollToSection={() => {
+          scrollToSection(refContactSection);
+        }}
+      />
     </main>
   );
 };

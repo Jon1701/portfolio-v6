@@ -56,35 +56,46 @@ const ContainerButtons = styled.div`
 	`}
 `;
 
+interface Props {
+  /**
+   * Function to scroll to the top of the Section.
+   */
+  scrollToSection(): void;
+}
+
 /**
  * Contact section.
  */
-const ContactSection = () => {
-  return (
-    <Container>
-      <Content>
-        <H2>Let's Work Together</H2>
+const ContactSection = React.forwardRef<HTMLElement, Props>(
+  ({ scrollToSection }: Props, ref) => {
+    return (
+      <Container ref={ref}>
+        <Content>
+          <H2>Let's Work Together</H2>
 
-        <p>
-          I am currently looking for an Intermediate Front-End Developer role.
-          So, if you like my portfolio and think I am suited for a position at
-          your company, let's get in touch.
-        </p>
+          <p>
+            I am currently looking for an Intermediate Front-End Developer role.
+            So, if you like my portfolio and think I am suited for a position at
+            your company, let's get in touch.
+          </p>
 
-        <ContainerButtons>
-          <LinkButton
-            href="https://www.linkedin.com/in/jonbalon"
-            faIcon={faLinkedin}>
-            Connect on LinkedIn
-          </LinkButton>
+          <ContainerButtons>
+            <LinkButton
+              href="https://www.linkedin.com/in/jonbalon"
+              faIcon={faLinkedin}>
+              Connect on LinkedIn
+            </LinkButton>
 
-          <LinkButton href="https://github.com/Jon1701" faIcon={faGithubSquare}>
-            View my GitHub Profile
-          </LinkButton>
-        </ContainerButtons>
-      </Content>
-    </Container>
-  );
-};
+            <LinkButton
+              href="https://github.com/Jon1701"
+              faIcon={faGithubSquare}>
+              View my GitHub Profile
+            </LinkButton>
+          </ContainerButtons>
+        </Content>
+      </Container>
+    );
+  }
+);
 
 export default ContactSection;
