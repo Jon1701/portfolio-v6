@@ -5,9 +5,6 @@ PATH_NODE_MODULES_BIN=${PATH_NODE_MODULES}/.bin
 PORT_GATSBY_DEV_SERVER=8080
 PORT_GATSBY_STAGING_SERVER=9000
 
-# Production site URL.
-DEPLOYMENT_CANONICAL_URL=jonbalon.com
-
 # Install dependencies.
 install: install-node-modules disable-gatsby-telemetry
 
@@ -46,7 +43,7 @@ run-stylelint:
 	@echo "Done running Stylelint."
 
 # Builds a Production version of the project.
-build: generate-cname
+build:
 	@echo "Building Production version of the project..."
 	@${PATH_NODE_MODULES_BIN}/gatsby build
 	@echo "Done building Production version of the project"
@@ -78,9 +75,3 @@ disable-gatsby-telemetry:
 	@${PATH_NODE_MODULES_BIN}/gatsby telemetry \
 		--disable
 	@echo "Done disabling Gatsby telemetry."
-
-# Generates a CNAME file to configure the custom domain name.
-generate-cname:
-	@echo Generating CNAME...
-	@echo ${DEPLOYMENT_CANONICAL_URL} > ./public/CNAME
-	@echo Done generating CNAME

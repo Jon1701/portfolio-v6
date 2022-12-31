@@ -26,7 +26,6 @@ The following `make` commands are available:
   - `make run-prettier` to run Prettier
   - `make run-stylelint` to run Stylelint
 - `make build` to build a Production version of the project
-  - `make generate-cname` to generate CNAME file in the `public/` folder
 - `make dev` to start the Gatsby Development server
 - `make staging` to start the Gatsby Staging server
 - `make clean` to delete generated files
