@@ -50,6 +50,7 @@ const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
  */
 const IndexPage: React.FC<PageProps> = () => {
   // Reference to section elements.
+  const refLandingSection = useRef<HTMLElement>(null);
   const refProjectsSection = useRef<HTMLElement>(null);
   const refWorkExperienceSection = useRef<HTMLElement>(null);
   const refContactSection = useRef<HTMLElement>(null);
@@ -57,6 +58,10 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
       <LandingSection
+        ref={refLandingSection}
+        scrollToSection={() => {
+          scrollToSection(refLandingSection);
+        }}
         scrollToProjectsSection={() => {
           scrollToSection(refProjectsSection);
         }}

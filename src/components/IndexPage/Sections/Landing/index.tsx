@@ -82,33 +82,38 @@ const Description = styled.div`
 
 interface Props {
   /**
+   * Function to scroll to the top of the Section.
+   */
+  scrollToSection(): void;
+
+  /**
    * Function to scroll to the Projects section.
    */
   scrollToProjectsSection(): void;
 }
 
 /**
- * Index Page Landing Section.
+ * Landing Section.
  */
-const LandingSection: React.FC<Props> = ({
-  scrollToProjectsSection,
-}: Props) => {
-  return (
-    <Container>
-      <Content>
-        <Name>Jon Balon</Name>
+const LandingSection = React.forwardRef<HTMLElement, Props>(
+  ({ scrollToSection, scrollToProjectsSection }: Props, ref) => {
+    return (
+      <Container ref={ref}>
+        <Content>
+          <Name>Jon Balon</Name>
 
-        <Description>
-          <div style={{ width: '60%', margin: '0 auto' }}>
-            I am a Front-End Developer with 5 years of professional experience
-            working with JavaScript, HTML, and CSS in the React ecosystem.
-          </div>
-        </Description>
+          <Description>
+            <div style={{ width: '60%', margin: '0 auto' }}>
+              I am a Front-End Developer with 5 years of professional experience
+              working with JavaScript, HTML, and CSS in the React ecosystem.
+            </div>
+          </Description>
 
-        <ViewPortfolioButton handleClick={scrollToProjectsSection} />
-      </Content>
-    </Container>
-  );
-};
+          <ViewPortfolioButton handleClick={scrollToProjectsSection} />
+        </Content>
+      </Container>
+    );
+  }
+);
 
 export default LandingSection;
