@@ -4,6 +4,9 @@
   "private": true,
   "description": "This is the 6th iteration of my portfolio.",
   "author": "Jon Balon",
+  "scripts": {
+    "build": "make build"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
