@@ -206,7 +206,7 @@ const projects: ProjectHistory = {
       'Vercel',
       'OpenWeatherMap',
     ],
-    demoLink: 'https://weather-9wlky8dr3-development-jonbaloncom.vercel.app/',
+    demoLink: 'https://weather-app-tan-two.vercel.app/',
     githubLink: 'https://github.com/Jon1701/weather-app',
   },
   [ProjectIDEnums.PersonalProjectPortfolioV6]: {
