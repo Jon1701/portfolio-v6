@@ -17,7 +17,7 @@ const StyledButton = styled.button`
   text-align: center;
 
   box-sizing: border-box;
-  background-color: #292929;
+  background-color: #404040;
   padding: 15px 0;
 
   user-select: none;
