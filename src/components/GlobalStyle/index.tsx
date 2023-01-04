@@ -1,7 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
-import { ZenMaruGothicRegular } from '@fonts/index';
+import { ZenMaruGothicMedium } from '@fonts/index';
 
 const GlobalStyle = createGlobalStyle`
 	html,
@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 
-		font-family: "Zen Maru Gothic Regular", sans-serif;
+		font-family: "Zen Maru Gothic Medium", sans-serif;
 		background-color: #121212;
 		color: #C4C7C5;
 	}
@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
  */
 const Wrapped: React.FC = () => (
   <React.Fragment>
-    <ZenMaruGothicRegular />
+    <ZenMaruGothicMedium />
     <GlobalStyle />
   </React.Fragment>
 );
