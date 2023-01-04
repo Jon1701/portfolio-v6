@@ -116,7 +116,7 @@ const ContainerImage = styled.div<ContainerImageProps>`
   background-repeat: no-repeat;
 
   width: 100%;
-  height: 250px;
+  aspect-ratio: 16 / 9;
 
   transition: ease-in-out 0.1s;
   filter: brightness(90%);
