@@ -17,7 +17,7 @@ import ToggleButton from './components/ToggleButton';
  * Component container.
  */
 const Container = styled.article`
-  background-color: #202020;
+  background-color: #1c1c1c;
   box-shadow: rgb(0 0 0 / 20%) 0 2px 4px -1px, rgb(0 0 0 / 14%) 0 4px 5px 0,
     rgb(0 0 0 / 12%) 0 1px 10px 0;
 
