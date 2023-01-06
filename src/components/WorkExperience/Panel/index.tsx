@@ -73,7 +73,7 @@ interface ContainerExperienceDetailsProps {
  * Container for Work Experience details.
  */
 const ContainerExperienceDetails = styled.div<ContainerExperienceDetailsProps>`
-  background-color: #202020;
+  background-color: rgb(32 32 32 / 60%);
   box-shadow: rgb(0 0 0 / 20%) 0 2px 4px -1px, rgb(0 0 0 / 14%) 0 4px 5px 0,
     rgb(0 0 0 / 12%) 0 1px 10px 0;
 
