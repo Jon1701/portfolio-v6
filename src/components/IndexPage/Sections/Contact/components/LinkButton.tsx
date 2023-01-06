@@ -25,7 +25,7 @@ const StyledAnchor = styled.a<StyledAnchorProps>`
   font-weight: bold;
   border: solid 1px ${props => props.brandColor};
   padding: 25px;
-  background-color: #121212;
+  background-color: rgb(18 18 18 / 60%);
 
   ${mobileBreakpoint`
     height: 150px;
