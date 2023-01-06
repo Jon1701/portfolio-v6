@@ -3,11 +3,18 @@ import styled from 'styled-components';
 
 import WorkExperiencePanel from '@components/WorkExperience/Panel';
 
+import bgURL from './assets/images/backgrounds/polygon-luminary.png';
+
 /**
  * Component container.
  */
 const Container = styled.section`
   min-height: 100vh;
+
+  background-image: url('${bgURL}');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 `;
 
 /**
