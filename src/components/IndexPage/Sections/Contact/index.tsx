@@ -15,7 +15,7 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
 
-  background-color: #181818;
+  background-color: transparent;
 
   min-height: 100vh;
 `;

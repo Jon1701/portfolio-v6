@@ -2,6 +2,7 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
 import { ZenMaruGothicMedium } from '@fonts/index';
+import bgURL from './assets/images/backgrounds/polygon-luminary.png';
 
 const GlobalStyle = createGlobalStyle`
 	html,
@@ -10,8 +11,12 @@ const GlobalStyle = createGlobalStyle`
 		padding: 0;
 
 		font-family: "Zen Maru Gothic Medium", sans-serif;
-		background-color: #121212;
-		color: #C4C7C5;
+		color: #c4c7c5;
+
+		background: url(${bgURL});
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;	
 	}
 
 	a {
