@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { mobileBreakpoint } from '@util/breakpoints';
 
-import bgURL from './assets/background.jpg';
+import bgURL from './assets/circuit-board.png';
 import ViewPortfolioButton from './components/ViewPortfolioButton';
 
 /**
