@@ -11,7 +11,7 @@ const description: string =
   'Front-End Developer with 5 years of professional experience working with JavaScript, HTML, and CSS in the React ecosystem.';
 
 // Canonical site URL.
-const siteURL: string = 'https://www.jonbalon.com';
+const siteURL: string = 'https://jonbalon.com';
 
 interface AddressSchema {
   /**
@@ -107,7 +107,7 @@ const personSchema: PersonSchema = {
     postalCode: '(Redacted)',
     streetAddress: '(Redacted)',
   },
-  url: 'https://www.jonbalon.com',
+  url: siteURL,
   sameAs: [
     'https://www.github.com/Jon1701',
     'https://www.linkedin.com/in/jonbalon/',
