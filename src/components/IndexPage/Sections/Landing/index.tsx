@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 
 import { mobileBreakpoint } from '@util/breakpoints';
-
-import ViewPortfolioButton from './components/ViewPortfolioButton';
+import { PrimaryButton } from '@components/Buttons';
 
 /**
  * Component container.
@@ -83,7 +83,6 @@ const LandingSection = React.forwardRef<HTMLElement, Props>(
       <Container ref={ref}>
         <Content>
           <Name>Jon Balon</Name>
-
           <Description>
             <div style={{ width: '60%', margin: '0 auto' }}>
               I am a Front-End Developer with 5 years of professional experience
@@ -91,7 +90,13 @@ const LandingSection = React.forwardRef<HTMLElement, Props>(
             </div>
           </Description>
 
-          <ViewPortfolioButton handleClick={scrollToProjectsSection} />
+          <PrimaryButton
+            type="button"
+            icon={faAnglesDown}
+            iconSize={'2x'}
+            onClick={scrollToProjectsSection}>
+            Click here to view my Portfolio
+          </PrimaryButton>
         </Content>
       </Container>
     );
