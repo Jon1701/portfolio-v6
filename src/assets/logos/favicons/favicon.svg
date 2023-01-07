@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="500"
+   viewBox="0 0 132.29166 132.29167"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="Favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4314781"
+     inkscape:cx="270.69921"
+     inkscape:cy="327.28407"
+     inkscape:window-width="1551"
+     inkscape:window-height="1288"
+     inkscape:window-x="26"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer2" />
+  <defs
+     id="defs2">
+    <rect
+       x="33.509942"
+       y="38.440925"
+       width="463.02936"
+       height="457.7409"
+       id="rect2950" />
+  </defs>
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     sodipodi:insensitive="true">
+    <rect
+       style="opacity:1;fill:#181818;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-linecap:square;stroke-miterlimit:4.9e-07;stroke-dasharray:none;stroke-opacity:1"
+       id="rect378"
+       width="132.29167"
+       height="132.29167"
+       x="-132.29167"
+       y="0"
+       transform="scale(-1,1)"
+       inkscape:label="Square"
+       sodipodi:insensitive="true" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Text">
+    <g
+       aria-label="J"
+       transform="matrix(0.66922612,0,0,0.66922612,-107.92158,-43.66675)"
+       id="text2948"
+       style="font-weight:500;font-size:192px;font-family:'Zen Maru Gothic';-inkscape-font-specification:'Zen Maru Gothic Medium';text-align:center;text-anchor:middle;white-space:pre;shape-inside:url(#rect2950);opacity:1;fill:#181818;stroke-width:5;stroke-linecap:square;stroke-miterlimit:0">
+      <path
+         d="m 285.08691,94.901406 h 18.09375 v 96.656254 q 0,19.59375 -11.8125,30.65625 -11.71875,11.0625 -31.3125,11.0625 -20.34375,0 -31.6875,-10.40625 -11.34375,-10.40625 -11.34375,-29.15625 h 18 q 0,11.71875 6.375,18.28125 6.46875,6.5625 18.65625,6.5625 11.15625,0 18,-7.03125 6.9375,-7.03125 7.03125,-19.6875 z"
+         style="font-weight:normal;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff"
+         id="path3786" />
+    </g>
+  </g>
+</svg>

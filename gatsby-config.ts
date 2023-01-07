@@ -15,6 +15,9 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/logos/favicons/favicon.svg',
+      },
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -22,7 +25,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: './src/assets/logos/favicons/',
       },
       __key: 'images',
     },
