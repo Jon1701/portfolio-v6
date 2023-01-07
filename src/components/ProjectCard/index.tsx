@@ -8,8 +8,8 @@ import {
 } from '@util/breakpoints';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { LinkButton } from '@components/Buttons';
 
-import ExternalLinkButton from './components/ExternalLinkButton';
 import ListOfTechnologies from './components/ListOfTechnologies';
 import ToggleButton from './components/ToggleButton';
 
@@ -208,17 +208,15 @@ const ProjectCard: React.FC<ProjectDetails> = ({
       {demoLink !== undefined || githubLink !== undefined ? (
         <ContainerButtons>
           {demoLink !== undefined ? (
-            <ExternalLinkButton
-              href={demoLink}
-              faIcon={faArrowUpRightFromSquare}>
-              <React.Fragment>View Demo</React.Fragment>
-            </ExternalLinkButton>
+            <LinkButton icon={faArrowUpRightFromSquare} href={demoLink}>
+              View Demo
+            </LinkButton>
           ) : undefined}
 
           {githubLink !== undefined ? (
-            <ExternalLinkButton href={githubLink} faIcon={faGithub}>
-              <React.Fragment>View Code</React.Fragment>
-            </ExternalLinkButton>
+            <LinkButton icon={faGithub} href={githubLink}>
+              View Code
+            </LinkButton>
           ) : undefined}
         </ContainerButtons>
       ) : undefined}
