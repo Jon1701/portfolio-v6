@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import { mobileBreakpoint } from '@util/breakpoints';
 
-import bgURL from './assets/circuit-board.png';
 import ViewPortfolioButton from './components/ViewPortfolioButton';
 
 /**
@@ -20,23 +19,6 @@ const Container = styled.section`
   text-align: center;
   color: #fff;
   min-height: 100vh;
-
-  &::before {
-    content: '';
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-
-    background-image: url('${bgURL}');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-
-    filter: brightness(0.6) grayscale(100%);
-  }
 `;
 
 /**
