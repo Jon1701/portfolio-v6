@@ -4,18 +4,18 @@ import styled from 'styled-components';
 import ProjectCard, { ProjectDetails } from '@components/ProjectCard';
 import { mobileBreakpoint, tabletBreakpoint } from '@util/breakpoints';
 
-import byTheNumbersImageURL from './assets/images/by-the-numbers.png';
-import evoMemberPortalImageURL from './assets/images/evo-member-portal.png';
-import evoPluginImageURL from './assets/images/evo-plugin.png';
-import evoWebsiteImageURL from './assets/images/evo-website.png';
-import mansfieldLogoURL from './assets/images/mansfield-logo.png';
-import navTechLogoURL from './assets/images/navtech-logo.png';
-import pmpGatewayDashboardImageURL from './assets/images/pmp-gateway-dashboard.png';
-import pmpLogoURL from './assets/images/pmp-logo.png';
-import pmpSalesSiteImageURL from './assets/images/pmp-sales-site.png';
-import portfolioV6ImageURL from './assets/images/portfoliov6.png';
-import propertyReviewsImageURL from './assets/images/property-reviews.png';
-import weatherAppImageURL from './assets/images/weather-app.png';
+import byTheNumbersImageURL from './assets/images/projects/by-the-numbers.jpg';
+import evoMemberPortalImageURL from './assets/images/projects/evo-member-portal.png';
+import evoPluginImageURL from './assets/images/projects/evo-plugin.png';
+import evoWebsiteImageURL from './assets/images/projects/evo-website.png';
+import mansfieldLogoURL from './assets/images/logos/mansfield-logo.png';
+import navTechLogoURL from './assets/images/logos/navtech-logo.png';
+import pmpGatewayDashboardImageURL from './assets/images/projects/pmp-gateway-dashboard.png';
+import pmpLogoURL from './assets/images/logos/pmp-logo.png';
+import pmpSalesSiteImageURL from './assets/images/projects/pmp-sales-site.png';
+import portfolioV6ImageURL from './assets/images/projects/portfoliov6.png';
+import propertyReviewsImageURL from './assets/images/projects/property-reviews.png';
+import weatherAppImageURL from './assets/images/projects/weather-app.png';
 
 // Project lookup IDs.
 export enum ProjectIDEnums {
