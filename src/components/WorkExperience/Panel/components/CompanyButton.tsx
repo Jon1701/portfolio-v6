@@ -39,7 +39,7 @@ const StyledButton = styled.button<StyledButtonProps>`
       ${props => (props.isSelected ? props.accentColor : 'transparent')};
   }
 
-  background-color: ${props => (props.isSelected ? '#202020' : '#191919')};
+  background-color: ${props => (props.isSelected ? '#202020' : '#181818')};
   border-left: solid 2px
     ${props => (props.isSelected ? props.accentColor : 'transparent')};
 

@@ -303,8 +303,9 @@ const projectOrder = [
  */
 const Container = styled.section`
   min-height: 100vh;
-  background-color: transparent;
   padding-bottom: 50px;
+
+  background-color: #181818;
 `;
 
 /**
