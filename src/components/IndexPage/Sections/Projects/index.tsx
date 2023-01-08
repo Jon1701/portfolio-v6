@@ -396,6 +396,7 @@ const ProjectsSection = React.forwardRef<HTMLElement>((props, ref) => {
                 logoAltText={logoAltText}
                 demoLink={demoLink}
                 githubLink={githubLink}
+                linkIconSize="1x"
               />
             );
           })}

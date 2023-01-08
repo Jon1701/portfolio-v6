@@ -9,6 +9,7 @@ import {
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { LinkButton } from '@components/Buttons';
+import { SizeProp } from '@fortawesome/fontawesome-svg-core';
 
 import ListOfTechnologies from './components/ListOfTechnologies';
 import ToggleButton from './components/ToggleButton';
@@ -64,6 +65,11 @@ export interface ProjectDetails {
    * Link to the GitHub repository.
    */
   githubLink?: string;
+
+  /**
+   * Link icon size.
+   */
+  linkIconSize?: SizeProp;
 }
 
 /**
@@ -189,6 +195,7 @@ const ProjectCard: React.FC<ProjectDetails> = ({
   logoAltText,
   demoLink,
   githubLink,
+  linkIconSize,
 }: ProjectDetails) => {
   // Controls the visibility of the List of Technologies element.
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -208,13 +215,19 @@ const ProjectCard: React.FC<ProjectDetails> = ({
       {demoLink !== undefined || githubLink !== undefined ? (
         <ContainerButtons>
           {demoLink !== undefined ? (
-            <LinkButton icon={faArrowUpRightFromSquare} href={demoLink}>
+            <LinkButton
+              icon={faArrowUpRightFromSquare}
+              href={demoLink}
+              iconSize={linkIconSize}>
               View Demo
             </LinkButton>
           ) : undefined}
 
           {githubLink !== undefined ? (
-            <LinkButton icon={faGithub} href={githubLink}>
+            <LinkButton
+              icon={faGithub}
+              href={githubLink}
+              iconSize={linkIconSize}>
               View Code
             </LinkButton>
           ) : undefined}
