@@ -5,6 +5,8 @@ import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 import { mobileBreakpoint } from '@util/breakpoints';
 import { PrimaryButton } from '@components/Buttons';
 
+import bgURL from './assets/wallpapers/polygon-luminary.svg';
+
 /**
  * Component container.
  */
@@ -19,6 +21,12 @@ const Container = styled.section`
   text-align: center;
   color: #fff;
   min-height: 100vh;
+
+  background-color: transparent;
+  background-image: url(${bgURL});
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 `;
 
 /**
