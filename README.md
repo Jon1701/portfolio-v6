@@ -4,10 +4,9 @@
 
 `Active`
 
-## Description
+## Project Description
 
-- This is the 6th iteration of my portfolio.
-- Built using Gatsby.js.
+The 6th iteration of [jonbalon.com](https://jonbalon.com) built using [Gatsby.js](https://www.gatsbyjs.com/) and hosted with [Vercel](https://vercel.com/).
 
 ## Prerequisites
 
