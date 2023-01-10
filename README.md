@@ -6,7 +6,7 @@
 
 ## Project Description
 
-The 6th iteration of [jonbalon.com](https://jonbalon.com) built using [Gatsby.js](https://www.gatsbyjs.com/) and hosted with [Vercel](https://vercel.com/).
+The 6th iteration of [jonbalon.com](https://jonbalon.com) built using [Gatsby.js](https://www.gatsbyjs.com/) and hosted with [GitHub Pages](https://pages.github.com/).
 
 ## Prerequisites
 

@@ -253,6 +253,7 @@ const projects: ProjectHistory = {
       'Stylelint',
       'Git',
       'GitHub',
+      'GitHub Pages',
     ],
     githubLink: 'https://github.com/Jon1701/portfolio-v6',
   },
