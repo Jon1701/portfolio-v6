@@ -28,7 +28,7 @@ const StyledAnchor = styled.a<StyledAnchorProps>`
   background-color: #121212;
 
   ${mobileBreakpoint`
-    height: 150px;
+    height: 180px;
   `}
 
   height: 300px;
