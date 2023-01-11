@@ -10,8 +10,8 @@ const StyledButton = styled.button`
   all: unset;
   display: inline-block;
 
-  background-color: #6f1ab6;
-  border: solid 1px #6f1ab6;
+  background-color: #dc143c;
+  border: solid 1px #dc143c;
 
   border-radius: 5px;
   padding: 15px;
@@ -33,8 +33,8 @@ const StyledAnchor = styled.a`
   all: unset;
   display: inline-block;
 
-  background-color: #6f1ab6;
-  border: solid 1px #6f1ab6;
+  background-color: #dc143c;
+  border: solid 1px #dc143c;
 
   border-radius: 5px;
   padding: 15px;
