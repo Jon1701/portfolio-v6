@@ -130,7 +130,7 @@ export const CanonicalURL: React.FC = () => (
  * Page meta description.
  */
 export const MetaDescription: React.FC = () => (
-  <meta property="description" content={description} />
+  <meta name="description" content={description} />
 );
 
 /**
