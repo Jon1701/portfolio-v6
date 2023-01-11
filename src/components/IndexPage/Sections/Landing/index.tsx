@@ -51,11 +51,12 @@ const Content = styled.div`
 /**
  * Name.
  */
-const Name = styled.div`
+const Name = styled.h1`
   ${mobileBreakpoint`
     font-size: 3rem;
   `}
 
+  margin-top: 0;
   font-size: 4rem;
 `;
 
