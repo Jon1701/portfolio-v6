@@ -92,7 +92,7 @@ const LandingSection = React.forwardRef<HTMLElement, Props>(
         <Content>
           <Name>Jon Balon</Name>
           <Description>
-            <div style={{ width: '60%', margin: '0 auto' }}>
+            <div style={{ width: '80%', margin: '0 auto' }}>
               I am a Front-End Developer with 5 years of professional experience
               working with JavaScript, HTML, and CSS in the React ecosystem.
             </div>
