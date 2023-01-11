@@ -174,11 +174,11 @@ const FigCaption = styled.figcaption`
  * Container for the external link buttons.
  */
 const ContainerButtons = styled.div`
-  text-align: center;
-
-  & > *:not(:last-child) {
-    margin-right: 10px;
-  }
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 
   margin-bottom: 15px;
 `;
