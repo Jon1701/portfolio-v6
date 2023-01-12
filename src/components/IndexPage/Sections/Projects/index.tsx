@@ -260,7 +260,7 @@ const projects: ProjectHistory = {
   [ProjectIDEnums.PersonalProjectPropertyReviewsApp]: {
     title: 'Property Reviews App',
     description:
-      'Full Stack Application which allows users to review residential properties. (WIP)',
+      'Full Stack Application which allows users to review residential properties. (No longer in active development)',
     imageURL: propertyReviewsImageURL,
     technologies: [
       'Go',
@@ -268,17 +268,6 @@ const projects: ProjectHistory = {
       'GORM',
       'PostgreSQL',
       'Docker',
-      'HTML',
-      'CSS',
-      'React',
-      'JavaScript',
-      'TypeScript',
-      'Next.js',
-      'Axios',
-      'Styled Components',
-      'ESLint',
-      'Prettier',
-      'Stylelint',
       'Git',
       'GitHub',
     ],
