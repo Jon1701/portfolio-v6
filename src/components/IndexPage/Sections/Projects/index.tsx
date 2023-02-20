@@ -138,7 +138,7 @@ const projects: ProjectHistory = {
   [ProjectIDEnums.NavigateTechnologiesEVOMemberPortal]: {
     title: 'EVO SEO Member Portal',
     description:
-      'Paid value-add for the EVO SEO WordPress plugin which facilitated seamless integration with Google Search Console and Google Analytics.',
+      'Add-on for the EVO SEO WordPress plugin which facilitated seamless integration with Google Search Console and Analytics.',
     imageURL: evoMemberPortalImageURL,
     technologies: [
       'HTML',
@@ -196,7 +196,7 @@ const projects: ProjectHistory = {
   [ProjectIDEnums.MansfieldByTheNumbers]: {
     title: 'Sentry By The Numbers',
     description:
-      'Data fetching algorithm to generate infographics from official NHL game data.',
+      'Data fetching algorithm to automate the creation of infographics from official NHL game data.',
     imageURL: byTheNumbersImageURL,
     technologies: [
       'HTML',
@@ -238,7 +238,7 @@ const projects: ProjectHistory = {
   },
   [ProjectIDEnums.PersonalProjectPortfolioV6]: {
     title: 'Portfolio V6',
-    description: 'The 6th iteration of my Portfolio. (WIP)',
+    description: 'The 6th iteration of my Portfolio.',
     imageURL: portfolioV6ImageURL,
     technologies: [
       'HTML',
@@ -279,9 +279,7 @@ const projects: ProjectHistory = {
 const projectOrder = [
   ProjectIDEnums.PricematepayGatewayDashboard,
   ProjectIDEnums.PricematepaySalesSite,
-  ProjectIDEnums.NavigateTechnologiesEVOPlugin,
   ProjectIDEnums.NavigateTechnologiesEVOMemberPortal,
-  ProjectIDEnums.NavigateTechnologiesEVOProductSite,
   ProjectIDEnums.MansfieldByTheNumbers,
   ProjectIDEnums.PersonalProjectWeatherApp,
   ProjectIDEnums.PersonalProjectPortfolioV6,
